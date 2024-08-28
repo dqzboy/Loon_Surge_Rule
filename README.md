@@ -11,7 +11,7 @@ Loon自用规则，规则、插件来自网站，本人不作维护。只进行�
 <br/>
 <table>
     <tr>
-      <td width="50%" align="center"><b>配置文件</b></td>
+      <td width="50%" align="center"><b>配置管理</b></td>
       <td width="50%" align="center"><b>下载规则</b></td>
     </tr>
     <tr>
