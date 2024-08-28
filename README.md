@@ -6,17 +6,17 @@ Loon自用规则，规则、插件来自网站，本人不作维护。只进行�
 - 负载均衡、广告过滤
 
 ## 使用
-- 复制规则链接导入Loon
+- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon_Script/main/conf/loon.conf)** 导入Loon
 
 <br/>
 <table>
     <tr>
-      <td width="50%" align="center"><b>系统环境检查</b></td>
-      <td width="50%" align="center"><b>服务部署安装</b></td>
+      <td width="50%" align="center"><b>配置文件</b></td>
+      <td width="50%" align="center"><b>下载规则</b></td>
     </tr>
     <tr>
         <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/518b4c0f-e6bb-4cf1-89df-416b3375bf2f?raw=true"></td>
-        <td width="50%" align="center"><img src="?raw=true"></td>
+        <td width="50%" align="center"><img src=https://github.com/user-attachments/assets/73bd376b-a88e-4113-b681-8e262de7e264?raw=true"></td>
     </tr>
 </table>
 
