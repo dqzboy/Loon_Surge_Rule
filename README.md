@@ -6,7 +6,7 @@ Loon自用规则，规则、插件来自网站，本人不作维护。只进行�
 - 负载均衡、广告过滤
 
 ## 使用
-- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon_Script/main/conf/loon.conf)** 导入Loon
+- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon_Rule/main/conf/loon.conf)** 导入Loon
 
 <br/>
 <table>
@@ -21,6 +21,8 @@ Loon自用规则，规则、插件来自网站，本人不作维护。只进行�
 </table>
 
 ## 感谢
-规则和插件来自：[whatshub](https://whatshub.top/loon)、[可莉的 Loon 资源](https://gitlab.com/lodepuly/vpn_tool)
+规则来自：[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon)
+
+插件来自：[可莉的 Loon 资源](https://gitlab.com/lodepuly/vpn_tool)
 
 图标来自：[Qure](https://github.com/Koolson/Qure)、[Orz-3](https://github.com/Orz-3/mini/tree/master/Color)
