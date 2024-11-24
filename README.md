@@ -23,6 +23,6 @@ Loon自用规则，规则、插件来自网站，本人不作维护。只进行�
 ## 感谢
 规则来自：[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon)
 
-插件来自：[可莉的 Loon 资源](https://gitlab.com/lodepuly/vpn_tool)
+插件来自：[可莉的 Loon 资源](https://github.com/luestr/ProxyResource)
 
 图标来自：[Qure](https://github.com/Koolson/Qure)、[Orz-3](https://github.com/Orz-3/mini/tree/master/Color)
