@@ -18,7 +18,14 @@ Loon自用规则，规则、插件收集于网络并进行适用性调整。本�
         <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/518b4c0f-e6bb-4cf1-89df-416b3375bf2f?raw=true"></td>
         <td width="50%" align="center"><img src=https://github.com/user-attachments/assets/73bd376b-a88e-4113-b681-8e262de7e264?raw=true"></td>
     </tr>
+    <tr>
+      <td width="50%" align="center"><b>手动关闭拦截QUIC</b></td>
+    </tr>
+    <tr>
+        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/2dddb3e5-188b-41ce-a70b-08b1349aac57?raw=true"></td>
+    </tr>
 </table>
+
 
 ## 感谢
 规则来自：[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon)
