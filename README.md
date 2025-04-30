@@ -24,6 +24,6 @@ Loon自用规则，规则、插件收集于网络并进行适用性调整。本�
 ## 感谢
 规则来自：[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon)、[whatshub](https://whatshub.top/profile)
 
-插件来自：[可莉的 Loon 资源](https://github.com/luestr/ProxyResource)、[whatshub](https://whatshub.top/loon)
+插件来自：[广告必须死]([https://github.com/luestr/ProxyResource](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin))
 
 图标来自：[Qure](https://github.com/Koolson/Qure)、[Orz-3](https://github.com/Orz-3/mini/tree/master/Color)
