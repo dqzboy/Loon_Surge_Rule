@@ -18,6 +18,14 @@ Loon自用规则，规则、插件收集于网络并进行适用性调整。本�
         <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/518b4c0f-e6bb-4cf1-89df-416b3375bf2f?raw=true"></td>
         <td width="50%" align="center"><img src=https://github.com/user-attachments/assets/73bd376b-a88e-4113-b681-8e262de7e264?raw=true"></td>
     </tr>
+    <tr>
+      <td width="50%" align="center"><b>拦截QUIC</b></td>
+      <td width="50%" align="center"><b>关闭QUIC</b></td>
+    </tr>
+    <tr>
+        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/17c44668-6f01-4e61-b766-bc0284146d14?raw=true"></td>
+        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/5931a905-3365-4e47-bb64-3b925e2ab242?raw=true"></td>
+    </tr>
 </table>
 
 
