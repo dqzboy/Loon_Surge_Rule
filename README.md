@@ -20,10 +20,17 @@ Loon自用规则，规则、插件收集于网络并进行适用性调整。本�
     </tr>
 </table>
 
+## 图标合集
+
+[Weigeshen整合图标合集](https://raw.githubusercontent.com/weigeshen/-/main/TuBiao/TuBiaoDingYue.json)
+
+[fmz200の图标合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/icons-all.json)
+
+[QureColor图标合集](https://raw.githubusercontent.com/Koolson/Qure/master/Other/QureColor.json)
+
+[离歌图标集](https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/ligeicon-surge.json)
 
 ## 感谢
 规则来自：[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon)
 
 插件来自：[广告必须死](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin)， [TG频道](https://t.me/Aa28413761)，[可莉的Loon资源库](https://github.com/luestr/ProxyResource)
-
-图标来自：[Qure](https://github.com/Koolson/Qure)、[Orz-3](https://github.com/Orz-3/mini/tree/master/Color)
