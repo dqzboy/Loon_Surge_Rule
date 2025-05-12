@@ -30,6 +30,10 @@ Loon自用规则，规则、插件收集于网络并进行适用性调整。本�
 
 [离歌图标集](https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/ligeicon-surge.json)
 
+[可莉的旗帜图标](https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Flag_icon/ColorfulStaticFlag.json)
+
+[可莉的应用图标](https://raw.githubusercontent.com/luestr/IconResource/main/KeLee_icon.json)
+
 ## 感谢
 规则来自：[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon)
 
