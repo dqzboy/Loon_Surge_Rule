@@ -1,12 +1,27 @@
 ## 介绍
-Loon自用规则，规则、插件收集于网络并进行适用性调整。本人不作维护。只进行了整合并整理适合个人使用的Loon规则
+Loon、Surge自用分流去广告规则，规则、插件、模块收集于网络并进行适用性调整。本人不作维护。只进行了整合并整理适合个人使用的Loon、Surge规则
 
 ## 功能
 - 自动分流、测速
 - 负载均衡、广告过滤
 
-## 使用
-- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon_Rule/main/conf/loon.conf)** 导入Loon
+## Surge 导入规则
+- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon-Surge_Rule/refs/heads/main/conf/Surge/surge.conf)** 导入Surge
+
+<br/>
+<table>
+    <tr>
+      <td width="50%" align="center"><b>下载规则</b></td>
+      <td width="50%" align="center"><b>模块下载</b></td>
+    </tr>
+    <tr>
+        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/3bb80aeb-26d9-4a82-9ba2-420892ff05ec?raw=true"></td>
+        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/9297a375-4f6b-407c-b110-32d8a9151bc8?raw=true"></td>
+    </tr>
+</table>
+
+## Loon 导入规则
+- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon-Surge_Rule/refs/heads/main/conf/Loon/loon.conf)** 导入Loon
 
 <br/>
 <table>
