@@ -52,4 +52,4 @@ Loon、Surge自用分流去广告规则，规则、插件、模块收集于网�
 ## 感谢
 规则来自：[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon)
 
-插件来自：[广告必须死](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin)， [TG频道](https://t.me/Aa28413761)，[可莉的Loon资源库](https://github.com/luestr/ProxyResource)
+插件来自：[广告必须死](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin)，[可莉的Loon资源库](https://github.com/luestr/ProxyResource)
