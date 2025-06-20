@@ -31,9 +31,31 @@ Loon、Surge自用分流去广告规则，规则、插件、模块收集于网�
     </tr>
     <tr>
         <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/518b4c0f-e6bb-4cf1-89df-416b3375bf2f?raw=true"></td>
-        <td width="50%" align="center"><img src=https://github.com/user-attachments/assets/73bd376b-a88e-4113-b681-8e262de7e264?raw=true"></td>
+        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/73bd376b-a88e-4113-b681-8e262de7e264?raw=true"></td>
     </tr>
 </table>
+
+## 重写、规则转换
+**（1）** 首先在你的软件安装`Script-Hub`
+- GitHub连接：[Script-Hub](https://github.com/Script-Hub-Org/Script-Hub)
+
+**（2）** 通过浏览器打开 `Script-Hub` 
+- https://script.hub
+
+**（3）** 规则转换
+
+<br/>
+<table>
+    <tr>
+      <td width="50%" align="center"><b>规则转换</b></td>
+      <td width="50%" align="center"><b>导入规则</b></td>
+    </tr>
+    <tr>
+        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/d9b1317b-13eb-4c4c-a9ae-042bc3bde551?raw=true"></td>
+        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/eb595b74-1cdb-46eb-91a7-d51df7d7c41c?raw=true"></td>
+    </tr>
+</table>
+
 
 ## 图标合集
 
