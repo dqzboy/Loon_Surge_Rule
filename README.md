@@ -6,7 +6,7 @@ Loon、Surge自用分流去广告规则，规则、插件、模块收集于网�
 - 负载均衡、广告过滤
 
 ## Surge 导入规则
-- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon-Surge_Rule/refs/heads/main/conf/Surge/surge.conf)** 导入Surge
+- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon_Surge_Rule/refs/heads/main/conf/Surge/surge.conf)** 导入Surge
 
 <br/>
 <table>
@@ -21,7 +21,7 @@ Loon、Surge自用分流去广告规则，规则、插件、模块收集于网�
 </table>
 
 ## Loon 导入规则
-- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon-Surge_Rule/refs/heads/main/conf/Loon/loon.conf)** 导入Loon
+- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon_Surge_Rule/refs/heads/main/conf/Loon/loon.conf)** 导入Loon
 
 <br/>
 <table>
