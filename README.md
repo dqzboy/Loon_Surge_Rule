@@ -1,6 +1,12 @@
 ## 介绍
 Loon、Surge自用分流去广告规则，规则、插件、模块收集于网络并进行适用性调整。本人不作维护。只进行了整合并整理适合个人使用的Loon、Surge规则
 
+## 推广
+
+<a href="https://dqzboy.github.io/proxyui/racknerd" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/dqzboy/Images/dqzboy-proxy/render-vps.png" alt="高性价比海外 VPS 推荐" title="点击查看">
+</a>
+
 ## 功能
 - 自动分流、测速
 - 负载均衡、广告过滤
