@@ -57,6 +57,9 @@ Loon、Surge自用分流去广告规则，规则、插件、模块收集于网�
 </details>
 
 ## 重写、规则转换
+<details>
+<summary>点击展开 ...</summary>
+    
 **（1）** 首先在你的软件安装`Script-Hub`
 - GitHub连接：[Script-Hub](https://github.com/Script-Hub-Org/Script-Hub)
 
@@ -76,7 +79,7 @@ Loon、Surge自用分流去广告规则，规则、插件、模块收集于网�
         <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/eb595b74-1cdb-46eb-91a7-d51df7d7c41c?raw=true"></td>
     </tr>
 </table>
-
+</details>
 
 ## 节点延迟测试地址汇总
 
@@ -142,6 +145,7 @@ https://1.12.12.12/dns-query
 https://120.53.53.53/dns-query
 https://doh.pub/dns-query
 
+# 海外
 https://9.9.9.9/dns-query
 https://doh.apad.pro/dns-query
 https://1.1.1.1/dns-query
