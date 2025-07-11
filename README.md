@@ -35,6 +35,7 @@ Loon、Surge自用分流去广告规则，规则、插件、模块收集于网�
 ## Surge 导入规则
 - 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon_Surge_Rule/refs/heads/main/conf/Surge/Surge.conf)** 导入Surge
 
+### Surge IOS
 <br/>
 <table>
     <tr>
@@ -42,10 +43,22 @@ Loon、Surge自用分流去广告规则，规则、插件、模块收集于网�
       <td width="50%" align="center"><b>模块下载</b></td>
     </tr>
     <tr>
-        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/3bb80aeb-26d9-4a82-9ba2-420892ff05ec?raw=true"></td>
-        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/9297a375-4f6b-407c-b110-32d8a9151bc8?raw=true"></td>
+        <td width="50%" align="center"><img src="https://cdn.jsdelivr.net/gh/dqzboy/Images/dqzboy-proxy/surge-ios01.png?raw=true"></td>
+        <td width="50%" align="center"><img src="https://cdn.jsdelivr.net/gh/dqzboy/Images/dqzboy-proxy/surge-ios02.png?raw=true"></td>
     </tr>
 </table>
+
+### Surge Mac
+<br/>
+<table>
+    <tr>
+      <td width="50%" align="center"><b>Surge Mac下载配置</b></td>
+    </tr>
+    <tr>
+        <td width="50%" align="center"><img src="https://cdn.jsdelivr.net/gh/dqzboy/Images/dqzboy-proxy/surge-mac01.png?raw=true"></td>
+    </tr>
+</table>
+
 
 ## Loon 导入规则
 - 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon_Surge_Rule/refs/heads/main/conf/Loon/loon.conf)** 导入Loon
@@ -57,8 +70,8 @@ Loon、Surge自用分流去广告规则，规则、插件、模块收集于网�
       <td width="50%" align="center"><b>下载规则</b></td>
     </tr>
     <tr>
-        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/518b4c0f-e6bb-4cf1-89df-416b3375bf2f?raw=true"></td>
-        <td width="50%" align="center"><img src="https://github.com/user-attachments/assets/73bd376b-a88e-4113-b681-8e262de7e264?raw=true"></td>
+        <td width="50%" align="center"><img src="https://cdn.jsdelivr.net/gh/dqzboy/Images/dqzboy-proxy/loon-ios01.png?raw=true"></td>
+        <td width="50%" align="center"><img src="https://cdn.jsdelivr.net/gh/dqzboy/Images/dqzboy-proxy/loon-ios02.png?raw=true"></td>
     </tr>
 </table>
 
