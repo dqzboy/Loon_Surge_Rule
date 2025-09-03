@@ -1,3 +1,4 @@
+[Rule]
 # 通用 CDN 域名
 DOMAIN-SUFFIX,bsccdn.net
 DOMAIN-SUFFIX,gjfzpt.cn
@@ -25,9 +26,11 @@ DOMAIN,pcdn.yximgs.com
 DOMAIN,stun.hitv.com
 
 # 正则匹配规则
-DOMAIN-REGEX,.*pcdn.*biliapi.net
-DOMAIN-REGEX,.*pcdn.*youku.com
-DOMAIN-REGEX,.*p2p.*qq.com
+DOMAIN-KEYWORD,pcdn
+DOMAIN-KEYWORD,p2p
+DOMAIN-KEYWORD,stun
+DOMAIN-KEYWORD,biliapi
+DOMAIN-KEYWORD,youku
 
 # 斗鱼规则
 DOMAIN-SUFFIX,stun.douyucdn.cn
