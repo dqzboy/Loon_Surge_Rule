@@ -45,7 +45,7 @@ Loon、Surge自用**分流**、**去广告**规则，规则、插件、模块收
 </details>
 
 ## Loon 导入规则
-- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon_Surge_Rule/refs/heads/main/conf/Loon/loon.conf)** 导入Loon
+- 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon_Surge_Rule/refs/heads/main/conf/Loon/Loon.conf)** 导入Loon
 
 <details>
 <summary>点击展开 ...</summary>
