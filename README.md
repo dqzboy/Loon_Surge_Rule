@@ -230,4 +230,9 @@ quic://223.6.6.6:853
 ## 感谢
 规则来自：[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon)
 
-插件来自：[广告必须死](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin)，[奶思-Surge广告拦截&净化合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module)
+Loon 插件：
+- [奶思-Loon广告拦截&净化合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin)
+
+Surge模块：
+- [奶思-Surge广告拦截&净化合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module)
+- [墨鱼去广告融合版](https://raw.githubusercontent.com/ddgksf2013/Modules/refs/heads/main/Adblock.sgmodule)
