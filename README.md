@@ -44,7 +44,13 @@ Loon、Surge自用**分流**、**去广告**规则，规则、插件、模块收
 </table>
 </details>
 
+### Surge 模块
+- [Sparkle(持续维护)](https://github.com/kokoryh/Sparkle/tree/master/release)
+- [奶思-Surge广告拦截&净化合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module)
+- [墨鱼去广告融合版](https://raw.githubusercontent.com/ddgksf2013/Modules/refs/heads/main/Adblock.sgmodule)
+
 ## Loon 导入规则
+### Loon 分流规则
 - 复制 **[规则链接](https://raw.githubusercontent.com/dqzboy/Loon_Surge_Rule/refs/heads/main/conf/Loon/Loon.conf)** 导入Loon
 
 <details>
@@ -62,6 +68,9 @@ Loon、Surge自用**分流**、**去广告**规则，规则、插件、模块收
     </tr>
 </table>
 </details>
+
+### Loon 插件
+- [奶思-Loon广告拦截&净化合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin)
 
 ## 重写、规则转换
 <details>
@@ -229,10 +238,3 @@ quic://223.6.6.6:853
 
 ## 感谢
 规则来自：[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon)
-
-Loon 插件：
-- [奶思-Loon广告拦截&净化合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin)
-
-Surge模块：
-- [奶思-Surge广告拦截&净化合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module)
-- [墨鱼去广告融合版](https://raw.githubusercontent.com/ddgksf2013/Modules/refs/heads/main/Adblock.sgmodule)
