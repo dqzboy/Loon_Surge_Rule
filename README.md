@@ -45,9 +45,8 @@ Loon、Surge自用**分流**、**去广告**规则，规则、插件、模块收
 </details>
 
 ### Surge 模块
-- [本仓库收集整理的模块列表]()
+- [推荐 本仓库整理的模块 >>> 点击打开](https://dqzboy.github.io/proxyui/surge_module.html)
 - [奶思-Surge广告拦截&净化合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module)
-- [墨鱼去广告融合版](https://raw.githubusercontent.com/ddgksf2013/Modules/refs/heads/main/Adblock.sgmodule)
 
 ## Loon 导入规则
 ### Loon 分流规则
