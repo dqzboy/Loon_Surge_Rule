@@ -45,7 +45,7 @@ Loon、Surge自用**分流**、**去广告**规则，规则、插件、模块收
 </details>
 
 ### Surge 模块
-- [Sparkle(持续维护)](https://github.com/kokoryh/Sparkle/tree/master/release)
+- [本仓库收集整理的模块列表]()
 - [奶思-Surge广告拦截&净化合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module)
 - [墨鱼去广告融合版](https://raw.githubusercontent.com/ddgksf2013/Modules/refs/heads/main/Adblock.sgmodule)
 
@@ -239,3 +239,4 @@ quic://223.6.6.6:853
 
 ## 感谢
 规则来自：[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon)
+Surge模块转换自[可莉Loon插件](https://hub.kelee.one/)

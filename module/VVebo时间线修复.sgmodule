@@ -1,7 +1,7 @@
 #!name=VVebo时间线修复
 #!desc=修复失效的用户时间线和我的页面。使用此插件前需要禁用微博去广告插件，避免插件冲突导致失效。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-05-13 15:17:08
 
 [Script]

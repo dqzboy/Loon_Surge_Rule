@@ -1,7 +1,7 @@
 #!name=京东比价
 #!desc=首次使用需安装慢慢买应用，之后点击进入[我的]页面以捕获Cookie，捕获成功后方可在商品详情页面查看比价内容。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-05-15 05:41:50
 
 [Script]

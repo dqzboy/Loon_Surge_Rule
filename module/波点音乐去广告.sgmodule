@@ -1,7 +1,7 @@
 #!name=波点音乐去广告
 #!desc=精简应用配置，禁用P2P传输。移除开屏广告、横幅推广、悬浮广告、歌曲广告、商城入口、搜索推广、评论区推广、试听语音提醒。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-08-31 03:36:08
 
 [Body Rewrite]

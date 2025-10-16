@@ -1,7 +1,7 @@
 #!name=微博轻享版去广告
 #!desc=移除开屏广告、时间线广告及评论区广告，移除发现页面横幅推广、最常访问、主页访客及热门视频，移除搜索填充词。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-07-09 14:07:46
 
 [Body Rewrite]

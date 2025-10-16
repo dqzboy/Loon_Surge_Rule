@@ -1,7 +1,7 @@
 #!name=HTTPDNS拦截器
 #!desc=拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-08-20 00:30:31
 
 [Rule]

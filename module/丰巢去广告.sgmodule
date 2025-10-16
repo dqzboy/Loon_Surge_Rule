@@ -1,7 +1,7 @@
 #!name=丰巢去广告
 #!desc=移除弹窗，精简首页和生活服务。此插件需要IPA签名方可使用，App Store用户请勿使用此插件，务必点击下方主页链接查看详细教程。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-09-06 20:21:02
 
 [Body Rewrite]

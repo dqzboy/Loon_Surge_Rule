@@ -1,7 +1,7 @@
 #!name=猫耳FM去广告
 #!desc=移除开屏广告、青少年模式弹窗、首页顶部入口，替换底栏的直播入口为发现入口。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-05-17 13:50:41
 
 [Body Rewrite]

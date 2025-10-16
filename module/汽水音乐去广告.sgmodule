@@ -1,7 +1,7 @@
 #!name=汽水音乐去广告
 #!desc=移除开屏广告、弹窗广告、播放器推广、歌曲详情界面视频推广、播放页面的歌曲视频，精简首页和我的页面。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-08-31 05:46:14
 
 [Body Rewrite]

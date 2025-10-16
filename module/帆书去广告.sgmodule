@@ -1,7 +1,7 @@
 #!name=帆书去广告
 #!desc=移除弹窗和会员任务，精简首页、听书页面、课程菜单和我的页面。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-05-13 15:17:08
 
 [URL Rewrite]

@@ -1,7 +1,7 @@
 #!name=自动加入TestFlight
 #!desc=自动监控TestFlight名额，一旦有新的名额即刻加入。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-09-02 23:41:52
 
 [Script]

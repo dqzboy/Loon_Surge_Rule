@@ -1,7 +1,7 @@
 #!name=快手去广告
 #!desc=移除开屏广告、视频流广告、底栏皮肤、右下角悬浮推广，精简我的页面。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-09-16 12:09:59
 
 [Body Rewrite]

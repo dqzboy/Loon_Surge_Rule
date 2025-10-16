@@ -1,7 +1,7 @@
 #!name=前程无忧去广告
 #!desc=移除开屏广告、弹窗、信息流推广、职位页面推广和各类横幅推广。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-07-11 17:40:27
 
 [Body Rewrite]

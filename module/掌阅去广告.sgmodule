@@ -1,7 +1,7 @@
 #!name=掌阅去广告
 #!desc=移除开屏广告、悬浮广告、弹窗广告、朗读音色广告及我的页面广告，移除各页面的横幅轮播图。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
-#!category=浅时光去广告
+#!category=Surge去广告
 #!date=2025-10-11 08:34:06
 
 [Rule]
