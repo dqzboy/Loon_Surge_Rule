@@ -78,6 +78,7 @@ Loon、Surge自用**分流**、**去广告**规则，规则、插件、模块收
     
 **（1）** 首先在你的软件安装`Script-Hub`
 - GitHub连接：[Script-Hub](https://github.com/Script-Hub-Org/Script-Hub)
+- Surge 模块：[Script-Hub 右键复制链接](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/refs/heads/main/modules/script-hub.surge.sgmodule)
 
 **（2）** 通过浏览器打开 `Script-Hub` 
 - https://script.hub
