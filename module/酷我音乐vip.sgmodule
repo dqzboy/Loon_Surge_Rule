@@ -1,0 +1,74 @@
+#!name=酷我音乐[VIP+净化]
+#!desc=酷我音乐[VIP+净化] (作者: @ddgksf2013)
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=Surge去广告
+#!date=2025-08-17
+
+[Map Local]
+# > 通用广告请求@ddgksf2013
+https?:\/\/vip1\.kuwo\.cn\/vip\/activity\/kwMemberDay data-type=text data=" " status-code=200
+
+https?:\/\/mc\.tencentmusic\.com\/sdk\/ad data-type=text data=" " status-code=200
+
+https://.*kuwo.cn/AdSystem data-type=text data=" " status-code=200
+
+https://.*kuwo.cn/openapi/v1/user/freemium/global/text data-type=text data=" " status-code=200
+
+# > 屏蔽热词@ddgksf2013
+https?:\/\/hotword\.kuwo\.cn\/hotword\.s data-type=text data=" " status-code=200
+
+# > 通用广告请求@ddgksf2013
+https?:\/\/vip1\.kuwo\.cn\/vip_adv\/ data-type=text data=" " status-code=200
+
+# > 通用广告请求@ddgksf2013
+https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/app\/pasterAdvert data-type=text data=" " status-code=200
+
+# > 应用内弹窗及右下角@ddgksf2013
+^https?:\/\/mobilead\.kuwo\.cn\/ data-type=text data=" " status-code=200
+
+# > 开屏广告@ddgksf2013
+https?:\/\/rich\.kuwo\.cn\/AdService data-type=text data=" " status-code=200
+
+[Script]
+# > 搜索框处理@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=https?:\/\/searchrecterm\.kuwo\.cn\/recterm\.s, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+# > 会员页广告@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/page\/cells, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+# > 会员页顶部广告tab@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/setting, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+# > 数字专辑@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+# > 听书权限接口1@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=^https?:\/\/[a-z0-9A-Z]+\.(kuwo|lrts)\.(cn|me)\/a\.p, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+# > 听书权限接口2@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=^https?:\/\/.*\.kuwo\.cn\/v2\/api\/pay\/vip\/extraVipStatus, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+# > 新版vip接口1@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/enc\/user\/vip\?op=ui, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+# > 新版vip接口2@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/userbase\/vip\?op=get, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+# > 旧版vip接口@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip\?(uid|op=ui), script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+# > 皮肤解锁@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/theme, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+# > 下载接口@ddgksf2013
+mykkmusic.vip = type=http-request, pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?ui, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, timeout=60
+
+# > 我的页面卡片@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=^https?:\/\/appi.kuwo.cn/kuwopay/personal/cells, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+# > 音乐播放接口@ddgksf2013
+mykkmusic.vip = type=http-response, pattern=^https:\/\/[a-z0-9A-Z]+\.kuwo\.cn\/mobi\.s\?f=kwxs, script-path=https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/mykkmusic.vip.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% *.kuwo.cn, *.lrts.me, mc.tencentmusic.com
+
