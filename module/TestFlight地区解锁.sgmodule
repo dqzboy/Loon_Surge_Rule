@@ -1,0 +1,12 @@
+#!name=TestFlight地区解锁
+#!desc=解除TestFlight的区域限制，支持tvOS。
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=浅时光去广告
+#!date=2025-09-02 23:42:06
+
+[Body Rewrite]
+http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ "storefrontId" : "\d{6}-\d{2},\d{2}", "storefrontId":"143441-19,29",
+
+[MITM]
+hostname = %APPEND% testflight.apple.com
+

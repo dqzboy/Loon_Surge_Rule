@@ -1,0 +1,14 @@
+#!name=TeraBox去广告
+#!desc=移除开屏广告、应用内悬浮窗、弹窗广告及横幅广告。
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=浅时光去广告
+#!date=2025-10-09 12:38:19
+
+[Map Local]
+^https:\/\/www\.terabox\.com\/adx\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/www\.terabox\.com\/api\/ad\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% www.terabox.com
+

@@ -1,0 +1,22 @@
+#!name=下厨房去广告
+#!desc=移除开屏广告、信息流推广、各类横幅推广，精简首页标签。
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=浅时光去广告
+#!date=2025-05-13 15:17:08
+
+[Body Rewrite]
+http-response-jq ^https:\/\/api\.xiachufang\.com\/v2\/homepage\/paged_waterfall_recommendations\.json$ 'del(.multiplex_cells[] | select(.recommendation_cell.impression_sensor_events[]?.properties.target_type? == "ad"))'
+http-response-jq ^https:\/\/api\.xiachufang\.com\/v2\/config\/get\.json$ 'del(.content.tab_name[] | select(. == "减脂" or . == "商店" or . == "分类"))'
+
+[Map Local]
+^https:\/\/api\.xiachufang\.com\/v2\/ad\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/api\.xiachufang\.com\/v2\/account\/feeds_v7\.json data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/api\.xiachufang\.com\/v2\/homepage1810\/init_page\.json data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/api\.xiachufang\.com\/v2\/mark_mission\/get_sticker_info\.json data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.xiachufang.com
+

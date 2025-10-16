@@ -1,0 +1,12 @@
+#!name=有道云笔记去广告
+#!desc=移除开屏广告、弹窗广告及横幅广告。
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=浅时光去广告
+#!date=2025-09-21 16:43:19
+
+[Map Local]
+^https:\/\/silk\.lx\.netease\.com\/api\/open\/advertOpen\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% silk.lx.netease.com
+

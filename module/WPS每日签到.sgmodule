@@ -1,0 +1,14 @@
+#!name=WPS每日签到
+#!desc=WPS每日签到并兑换会员，需要进入此插件的主页链接，阅读使用说明操作。
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=浅时光去广告
+#!date=2025-05-13 15:17:08
+
+[Script]
+捕获Cookie = type=http-request, pattern=^https:\/\/moapi\.wps\.cn\/app\/ios\/v1\/app$, script-path=https://kelee.one/Resource/JavaScript/WPS/WPS_checkin.js, requires-body=true
+
+WPS每日签到 = type=cron, cronexp={{{CRONEXP}}}, script-path=https://kelee.one/Resource/JavaScript/WPS/WPS_checkin.js, timeout=120, argument="[{{{AK}}},{{{SK}}},{{{MAX_RETRIES}}}]"
+
+[MITM]
+hostname = %APPEND% moapi.wps.cn
+

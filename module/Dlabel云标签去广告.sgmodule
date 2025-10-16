@@ -1,0 +1,14 @@
+#!name=Dlabel云标签去广告
+#!desc=移除开屏广告及首页横幅。
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=浅时光去广告
+#!date=2025-07-22 04:45:08
+
+[Map Local]
+^https:\/\/dlabel\.ctaiot\.com\/api\/spreadstart\/list\.json\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/dlabel\.ctaiot\.com\/api\/spread\/journey\/select\.json\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% dlabel.ctaiot.com
+
