@@ -1,0 +1,12 @@
+#!name=磁力宅播放器去广告
+#!desc=移除开屏广告、弹窗和文件列表广告。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XFuse.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/cili\.xfuse\.fun\/s\/ - reject
+
+[MITM]
+hostname = %APPEND% cili.xfuse.fun, i.micecube.com, img.mofyi.com
+

@@ -1,0 +1,12 @@
+#!name=小喵看书去广告
+#!desc=移除小喵看书章末广告
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MiaoRead.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/api\.miaomiaoyd\.com\/book\/config\/getAdsSettings$ - reject
+
+[MITM]
+hostname = %APPEND% api.miaomiaoyd.com
+

@@ -1,0 +1,18 @@
+#!name=漫客栈去广告
+#!desc=移除开屏广告、漫画广告、小说章末广告，精简我的页面。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MKZ.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/base\.mkzcdn\.com\/advert\/app\/read\/v\d - reject-dict
+^https:\/\/base\.mkzcdn\.com\/advert\/app\/story\/read\/v\d - reject-dict
+^https:\/\/base\.mkzcdn\.com\/advert\/app\/task\/motivate\/v\d - reject-dict
+^https:\/\/base\.mkzcdn\.com\/advert\/app\/user\/slide\d\/v\d\/ - reject-dict
+
+[Script]
+配置修改 = type=http-response, pattern=^https:\/\/base\.mkzcdn\.com\/app\/config\/, script-path=https://kelee.one/Resource/JavaScript/MKZ/MKZ_remove_ads.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% base.mkzcdn.com
+

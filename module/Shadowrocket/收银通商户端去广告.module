@@ -1,0 +1,16 @@
+#!name=收银通商户端去广告
+#!desc=移除开屏广告和首页推广
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ShouYinTongMerchant.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/syt\.leshuazf\.com\/merchant\/merchant\/showOpenScreenAd$ - reject-dict
+^https:\/\/m\.fqfin\.cn\/cls\/leshuapay\/preCredit\.json$ - reject-dict
+^https:\/\/syt\.leshuazf\.com\/merchant\/messageCenter\/stationLetterList$ - reject-dict
+^https:\/\/syt\.leshuazf\.com\/merchant\/merchant\/getBannerConfig$ - reject-dict
+^https:\/\/syt\.leshuazf\.com\/merchant\/popup\/getPopupInfo$ - reject-dict
+
+[MITM]
+hostname = %APPEND% syt.leshuazf.com, m.fqfin.cn
+

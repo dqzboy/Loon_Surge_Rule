@@ -1,0 +1,20 @@
+#!name=飞客去广告
+#!desc=移除开屏广告、首页广告、板块广告、帖内广告和我的页面广告。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FlyerTea.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=advis - reject
+^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=vip_coupon - reject-dict
+^https:\/\/ptf\.flyertrip\.com\/static\/img\/common\/ic_plate_mine_button\.png - reject-img
+^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=getdata - reject-dict
+
+[Script]
+移除板块广告 = type=http-response, pattern=^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?version=5, script-path=https://kelee.one/Resource/JavaScript/FlyerTea/FlyerTea_remove_ads.js, requires-body=true
+
+移除签到弹窗广告 = type=http-response, pattern=^https:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=plugin&id=k_misign:sign, script-path=https://kelee.one/Resource/JavaScript/FlyerTea/FlyerTea_remove_ads.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% www.flyert.com.cn, ptf.flyertrip.com
+

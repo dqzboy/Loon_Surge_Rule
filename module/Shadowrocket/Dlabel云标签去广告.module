@@ -1,0 +1,13 @@
+#!name=Dlabel云标签去广告
+#!desc=移除开屏广告及首页横幅。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Dlabel.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/dlabel\.ctaiot\.com\/api\/spreadstart\/list\.json\? - reject-dict
+^https:\/\/dlabel\.ctaiot\.com\/api\/spread\/journey\/select\.json\? - reject-dict
+
+[MITM]
+hostname = %APPEND% dlabel.ctaiot.com
+

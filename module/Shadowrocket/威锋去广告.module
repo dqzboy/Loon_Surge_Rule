@@ -1,0 +1,15 @@
+#!name=威锋去广告
+#!desc=移除开屏广告、信息流广告、文末广告、首页轮播图推广。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WPForum.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/api\.wfdata\.club\/v2\/yesfeng\/yesList\? - reject-dict
+
+[Body Rewrite]
+http-response-jq ^https:\/\/api\.wfdata\.club\/v2\/yesfeng\/slideshow\? '.data |= map(select(.protocolId == 1))'
+
+[MITM]
+hostname = %APPEND% api.wfdata.club
+

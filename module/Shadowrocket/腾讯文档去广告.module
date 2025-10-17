@@ -1,0 +1,13 @@
+#!name=腾讯文档去广告
+#!desc=移除开屏广告、首页横幅推广。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TXDocs.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/tianshu\.qq\.com\/open\/ts_access\/GetAds\? - reject-dict
+^https:\/\/h5\.qzone\.qq\.com\/p\/adboss\/api\/json\/ts_access\/GetAds$ - reject-dict
+
+[MITM]
+hostname = %APPEND% tianshu.qq.com, h5.qzone.qq.com
+

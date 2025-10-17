@@ -1,0 +1,22 @@
+#!name=快对去广告
+#!desc=移除开屏广告、横幅推广，精简我的页面。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuaiDuiZuoYe.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Rule]
+DOMAIN,adx.zuoyebang.com,REJECT
+
+[URL Rewrite]
+^https:\/\/www\.kuaiduizuoye\.com\/init\/ad\/ - reject-dict
+^https:\/\/www\.kuaiduizuoye\.com\/activity\/init\/checkappconfig$ - reject-dict
+^https:\/\/www\.kuaiduizuoye\.com\/kdapi\/conf\/appbannersv3$ - reject-dict
+^https:\/\/www\.kuaiduizuoye\.com\/kdapi\/conf\/initbanner$ - reject-dict
+^https:\/\/apivip\.kuaiduizuoye\.com\/viponline\/scancode\/mycard$ - reject-dict
+
+[Body Rewrite]
+http-response-jq ^https:\/\/www\.kuaiduizuoye\.com\/codesearch\/aid\/home$ 'delpaths([["data","homeBannerList"]])'
+
+[MITM]
+hostname = %APPEND% www.kuaiduizuoye.com, apivip.kuaiduizuoye.com
+

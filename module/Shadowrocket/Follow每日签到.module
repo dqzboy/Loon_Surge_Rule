@@ -1,0 +1,12 @@
+#!name=Follow每日签到
+#!desc=Follow每日签到，需要进入此插件的主页链接，阅读使用说明操作。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FollowRSS.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Script]
+Follow每日签到 = type=cron, cronexp={{{cron}}}, script-path=https://kelee.one/Resource/JavaScript/FollowRSS/FollowRSS_checkin.js, timeout=120, argument="[{{{token}}},{{{cookie}}}]"
+
+[MITM]
+hostname = %APPEND% api.follow.is
+

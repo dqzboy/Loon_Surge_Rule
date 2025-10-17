@@ -1,0 +1,14 @@
+#!name=小米音箱去广告
+#!desc=移除开屏广告、应用内横幅广告及弹窗广告。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaomiSpeaker.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/marketing-aibox\.v\.mitvos\.com\/advertise\/ - reject-dict
+^https:\/\/marketing-aibox\.v\.mitvos\.com\/payGuide\/halfScreenMulti\/(home|cache)\? - reject-dict
+^https:\/\/marketing-aibox\.v\.mitvos\.com\/payGuide\/tabPage\? - reject-dict
+
+[MITM]
+hostname = %APPEND% marketing-aibox.v.mitvos.com
+

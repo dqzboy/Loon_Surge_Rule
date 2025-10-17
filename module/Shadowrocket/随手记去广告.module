@@ -1,0 +1,17 @@
+#!name=随手记去广告
+#!desc=移除开屏广告、神象云账本内部广告、我的页面广告，移除社区入口。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KingdeeMyMoney.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/tg\.feidee\.com\/online_ad\/api\/search\.do$ - reject-dict
+^https:\/\/yunmk\.feidee\.net\/cab-market-ws\/market\/v2\/contents$ - reject-dict
+^https:\/\/tg\.feidee\.com\/vis-ad-engine-ws\/api\/v2\/ads\/.+esultNum - reject-dict
+^https:\/\/api\.feidee\.net\/v1\/configs\/client\/configs - reject
+^https:\/\/tg\.feidee\.com\/vis-ad-engine-ws\/api\/show - reject-dict
+^https:\/\/yun\.feidee\.net\/cab-periodic-activity-ws\/terminal\/v1\/members\/status - reject-dict
+
+[MITM]
+hostname = %APPEND% tg.feidee.com, yunmk.feidee.net, community.feidee.com, api.feidee.net, yun.feidee.net
+

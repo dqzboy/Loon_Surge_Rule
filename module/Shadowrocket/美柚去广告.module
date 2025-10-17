@@ -1,0 +1,19 @@
+#!name=美柚去广告
+#!desc=移除开屏广告、弹窗推广和信息流推广，移除青少年模式弹窗和我的页面推广。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeetYou.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Rule]
+DOMAIN,ad.seeyouyima.com,REJECT
+DOMAIN,axxd.xmseeyouyima.com,REJECT
+
+[URL Rewrite]
+^https:\/\/circle\.(xm)?seeyouyima\.com\/v\d\/article_recommend\? - reject
+
+[Body Rewrite]
+http-response-jq ^https:\/\/common\.seeyouyima\.com\/v2\/conf_list$ 'delpaths([["data","confList","Minor_mode_card"]])'
+
+[MITM]
+hostname = %APPEND% circle.seeyouyima.com, circle.xmseeyouyima.com, common.seeyouyima.com
+

@@ -1,0 +1,15 @@
+#!name=美图秀秀去广告
+#!desc=移除开屏广告、横幅推广，精简我的页面。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeiTu.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Rule]
+DOMAIN,adui.tg.meitu.com,REJECT
+
+[Body Rewrite]
+http-response-jq ^https:\/\/api\.posters\.meitu\.com\/common\/init\.json 'delpaths([["data","vip"]])'
+
+[MITM]
+hostname = %APPEND% api.posters.meitu.com
+

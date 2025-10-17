@@ -1,0 +1,11 @@
+#!name=Foodie去广告
+#!desc=移除开屏广告和弹窗广告
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Foodie.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Rule]
+DOMAIN,api-ad.kajicam.com,REJECT
+DOMAIN,zjres-ad.kajicam.com,REJECT
+DOMAIN,popup-api.b612kaji.com,REJECT
+

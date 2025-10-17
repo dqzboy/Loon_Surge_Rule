@@ -1,0 +1,12 @@
+#!name=有道云笔记去广告
+#!desc=移除开屏广告、弹窗广告及横幅广告。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YoudaoNote.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/silk\.lx\.netease\.com\/api\/open\/advertOpen\/ - reject-dict
+
+[MITM]
+hostname = %APPEND% silk.lx.netease.com
+

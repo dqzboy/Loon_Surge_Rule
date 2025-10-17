@@ -1,0 +1,13 @@
+#!name=推栏去广告
+#!desc=过滤推栏广告
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Daily.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Body Rewrite]
+http-response-jq ^https?:\/\/m\.pvp\.xoyo\.com\/conf\/server-mapping$ 'delpaths([["data","splashConf"]])'
+http-response-jq ^https?:\/\/m\.pvp\.xoyo\.com\/conf\/server-mapping$ 'delpaths([["data","splashConfNew"]])'
+
+[MITM]
+hostname = %APPEND% m.pvp.xoyo.com
+

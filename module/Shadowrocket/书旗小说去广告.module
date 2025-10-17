@@ -1,0 +1,21 @@
+#!name=书旗小说去广告
+#!desc=移除书城横幅广告、听书广告、阅读广告、章末推荐、福利入口、悬浮窗、推荐搜索词，精简我的页面。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ShuQiCenterReader.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Rule]
+DOMAIN,render-web.11222.cn,REJECT
+
+[URL Rewrite]
+^https:\/\/huichuan\.sm\.cn\/nativead - reject-dict
+^https:\/\/ocean\.shuqireader\.com\/api\/route\/iosReadPage\/adV2 - reject-dict
+^https:\/\/ocean\.shuqireader\.com\/api\/route\/ios\/readPage$ - reject-dict
+^https:\/\/ocean\.shuqireader\.com\/api\/render\/load\/resource - reject
+
+[Script]
+移除书城横幅和阅读广告 = type=http-response, pattern=^https:\/\/ocean\.shuqireader\.com\/sqios\/render\/render\/page\/bookstore$, script-path=https://kelee.one/Resource/JavaScript/ShuQiCenterReader/ShuQiCenterReader_remove_ads.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% ocean.shuqireader.com, huichuan.sm.cn
+

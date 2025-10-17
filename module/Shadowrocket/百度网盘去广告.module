@@ -1,0 +1,18 @@
+#!name=百度网盘去广告
+#!desc=移除开屏广告、首页卡片广告、传输页面广告、各类弹窗，精简侧拉抽屉和我的页面。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BaiduNetDisk.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/pan\.baidu\.com\/api\/getconfig - reject-dict
+^https:\/\/pan\.baidu\.com\/api\/getsyscfg - reject-dict
+^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist - reject-dict
+^https:\/\/pan\.baidu\.com\/act\/api\/activityentry - reject-dict
+^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user\?method=gamecenter - reject-dict
+^https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list - reject-dict
+^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv - reject-dict
+
+[MITM]
+hostname = %APPEND% pan.baidu.com
+

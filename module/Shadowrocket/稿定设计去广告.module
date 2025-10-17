@@ -1,0 +1,19 @@
+#!name=稿定设计去广告
+#!desc=移除稿定设计开屏广告、首页轮播图和弹窗，移除功能入口角标。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/GaoDing.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/www\.gaoding\.com\/api\/v\d\/oc\/v\d\/delivery-pits\/ios-splash\/modules$ - reject-dict
+^https:\/\/www\.gaoding\.com\/api\/v\d\/oc\/delivery-pits\/(template|mine|home)-page-dialog\/modules$ - reject-dict
+^https:\/\/www\.gaoding\.com\/api\/v\d\/cp\/search-words\/v2\/placeholder - reject-dict
+
+[Body Rewrite]
+http-response-jq ^https:\/\/www\.gaoding\.com\/api\/v\d\/oc\/exhibitions\/template\/resources$ '.pits |= map(select(.module_type != "BANNER"))'
+http-response-jq ^https:\/\/www\.gaoding\.com\/api\/v\d\/oc\/exhibitions\/app_mine\/resources$ '.pits |= map(select(.module_type != "BANNER"))'
+http-response-jq ^https:\/\/www\.gaoding\.com\/api\/v\d\/oc\/exhibitions\/(templates|all_editor_tools)\/resources$ 'walk(if type == "object" and .badge_img_url? then .badge_img_url="" else . end)'
+
+[MITM]
+hostname = %APPEND% www.gaoding.com
+

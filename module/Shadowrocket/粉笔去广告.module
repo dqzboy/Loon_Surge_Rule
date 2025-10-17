@@ -1,0 +1,15 @@
+#!name=粉笔去广告
+#!desc=移除开屏广告、首页弹窗和悬浮窗。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FenBi.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/tiku\.fenbi\.com\/activity\/app\/launcher - reject-dict
+^https:\/\/keapi\.fenbi\.com\/app\/iphone\/\w+\/popup - reject-dict
+^https:\/\/market-api\.fenbi\.com\/iphone\/v1\/assistant\/info - reject-dict
+^https:\/\/market-api\.fenbi\.com\/iphone\/v1\/assistant\/entrance\/show - reject-dict
+
+[MITM]
+hostname = %APPEND% keapi.fenbi.com, market-api.fenbi.com, tiku.fenbi.com
+

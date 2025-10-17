@@ -1,0 +1,19 @@
+#!name=自动加入TestFlight
+#!desc=自动监控TestFlight名额，一旦有新的名额即刻加入。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Rule]
+DOMAIN,testflight.apple.com,PROXY
+
+[Script]
+获取账号令牌 = type=http-request, pattern=^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$, script-path=https://kelee.one/Resource/JavaScript/TestFlight/TF_keys.js
+
+应用ID捕获 = type=http-request, pattern=^https://testflight.apple.com/join/(.*), script-path=https://kelee.one/Resource/JavaScript/TestFlight/TF_keys.js
+
+自动加入TF = type=cron, cronexp={{{TimingParameters}}}, script-path=https://kelee.one/Resource/JavaScript/TestFlight/Auto_join_TF.js, timeout=180
+
+[MITM]
+hostname = %APPEND% testflight.apple.com
+

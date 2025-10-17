@@ -1,0 +1,15 @@
+#!name=微脉圈去广告
+#!desc=移除开屏广告、聊天页横幅提示及发现页面的横幅广告。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weimai.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Body Rewrite]
+http-response-jq ^https:\/\/confssl\d?\.iweimai\.cn\/wm_ios_update\.json\? 'if (getpath([]) | has("isShowCJAd")) then (setpath(["isShowCJAd"]; 0)) else . end'
+http-response-jq ^https:\/\/confssl\d?\.iweimai\.cn\/wm_ios_update\.json\? 'delpaths([["launchAd"]])'
+http-response-jq ^https:\/\/confssl\d?\.iweimai\.cn\/wm_ios_update\.json\? 'delpaths([["adBanners"]])'
+http-response-jq ^https:\/\/confssl\d?\.iweimai\.cn\/wm_ios_update\.json\? 'delpaths([["ad"]])'
+
+[MITM]
+hostname = %APPEND% confssl*.iweimai.cn
+

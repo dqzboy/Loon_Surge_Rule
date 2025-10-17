@@ -1,0 +1,18 @@
+#!name=小宇宙去广告
+#!desc=移除开屏广告、搜索框推荐词和AI总结。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CosmosPodcast.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash - reject-dict
+^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai - reject-dict
+^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get - reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category - reject-dict
+
+[Body Rewrite]
+http-response-jq ^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list '.data |= map(select(.type != "DISCOVERY_HEADER" and .type != "DISCOVERY_BANNER"))'
+
+[MITM]
+hostname = %APPEND% api.xiaoyuzhoufm.com
+

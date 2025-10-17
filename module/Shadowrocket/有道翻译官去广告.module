@@ -1,0 +1,14 @@
+#!name=有道翻译官去广告
+#!desc=移除开屏广告、横幅推广。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YoudaoTrans.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/gorgon\.youdao\.com\/gorgon\/v2\/request\.s - reject-dict
+^https:\/\/gorgon\.youdao\.com\/gorgon\/brand\/prefetch\.s - reject-dict
+^https:\/\/gorgon\.youdao\.com\/gorgon\/request\.s - reject-dict
+
+[MITM]
+hostname = %APPEND% gorgon.youdao.com
+

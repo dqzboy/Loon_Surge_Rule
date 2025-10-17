@@ -1,0 +1,13 @@
+#!name=TeraBox去广告
+#!desc=移除开屏广告、应用内悬浮窗、弹窗广告及横幅广告。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TeraBox.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/www\.terabox\.com\/adx\/ - reject-dict
+^https:\/\/www\.terabox\.com\/api\/ad\/ - reject-dict
+
+[MITM]
+hostname = %APPEND% www.terabox.com
+

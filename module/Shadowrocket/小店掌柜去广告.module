@@ -1,0 +1,12 @@
+#!name=小店掌柜去广告
+#!desc=移除开屏广告、活动推广和页面跳转。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ShopKeeperAdmin.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/mch\.juhesaas\.com\/api\/advertisement\/ - reject-dict
+
+[MITM]
+hostname = %APPEND% mch.juhesaas.com
+

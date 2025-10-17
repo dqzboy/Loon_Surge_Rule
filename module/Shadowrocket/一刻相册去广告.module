@@ -1,0 +1,17 @@
+#!name=一刻相册去广告
+#!desc=移除开屏广告、横幅广告和弹窗推广。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BaiduPhoto.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/pan\.baidu\.com\/act\/api\/conf\?.*conf_key=youa_core_config_ios - reject-dict
+^https:\/\/pan\.baidu\.com\/youai\/material\/v1\/getbynavid\?.*nav_id=1 - reject-dict
+
+[Body Rewrite]
+http-response-jq ^https:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\? 'delpaths([["data","service","config","advertisement"]])'
+http-response-jq ^https:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\? 'delpaths([["data","service","config","youa","pm_config_ad"]])'
+
+[MITM]
+hostname = %APPEND% pan.baidu.com, mbd.baidu.com
+

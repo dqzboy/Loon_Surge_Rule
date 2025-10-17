@@ -1,0 +1,16 @@
+#!name=夸克去广告
+#!desc=移除阅读广告，精简我的页面。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QuarkBrowser.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/huichuan\.sm\.cn\/nativead$ - reject
+^https:\/\/stars\.shuqireader\.com\/kkios\/render\/load\/resource\/appConfig$ - reject-dict
+
+[Script]
+精简我的页面 = type=http-response, pattern=^https:\/\/open-cms-api\.quark\.cn\/open-cms, script-path=https://kelee.one/Resource/JavaScript/QuarkBrowser/QuarkBrowser_remove_ads.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% huichuan.sm.cn, stars.shuqireader.com, open-cms-api.quark.cn
+

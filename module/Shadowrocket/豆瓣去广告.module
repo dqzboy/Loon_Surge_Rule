@@ -1,0 +1,17 @@
+#!name=豆瓣去广告
+#!desc=移除开屏广告、各页面信息流广告、首页横幅、搜索填充词。此插件需要IPA签名方可使用，App Store用户请勿使用此插件，务必点击下方主页链接查看详细教程。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DouBan.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/api\.douban\.com\/v\d\/app_ads\/splash - reject-dict
+^https:\/\/frodo\.douban\.com\/api\/v\d\/erebor\/feed_ad - reject-dict
+^https:\/\/m\.douban\.com\/rexxar\/api\/v\d\/market\/products\/ - reject-dict
+^https:\/\/frodo\.douban\.com\/api\/v\d\/movie\/ad - reject-dict
+^https:\/\/frodo\.douban\.com\/api\/v\d\/home_banner - reject-dict
+^https:\/\/frodo\.douban\.com\/api\/v\d\/search\/found_words - reject-dict
+
+[MITM]
+hostname = %APPEND% api.douban.com, frodo.douban.com, m.douban.com
+

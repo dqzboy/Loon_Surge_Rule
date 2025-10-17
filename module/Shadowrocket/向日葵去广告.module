@@ -1,0 +1,12 @@
+#!name=向日葵去广告
+#!desc=移除开屏广告、广告横幅。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/OraySunlogin.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_iOS_DEVICE_FREE\? - reject-dict
+
+[MITM]
+hostname = %APPEND% client-api-v2.oray.com
+

@@ -1,0 +1,14 @@
+#!name=顺丰速运去广告
+#!desc=移除开屏广告、首页下拉抽屉、首页推广、应用内悬浮窗、横幅广告，精简我的页面。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SF-Express.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow$ - reject-dict
+^https:\/\/ccsp-egmas\.sf-express\.com\/cx-app-video\/video\/app\/video\/labelClusterList$ - reject-dict
+^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList$ - reject-dict
+
+[MITM]
+hostname = %APPEND% ccsp-egmas.sf-express.com, ucmp.sf-express.com
+

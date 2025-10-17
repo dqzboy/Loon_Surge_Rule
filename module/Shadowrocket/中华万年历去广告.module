@@ -1,0 +1,23 @@
+#!name=中华万年历去广告
+#!desc=移除开屏广告、弹窗、信息流推广，精简我的页面。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/EtouchEcalendar.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Rule]
+DOMAIN,sdk.ad.sfys365.com,REJECT
+
+[URL Rewrite]
+^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/auth\/voice_room_entrance\/list\? - reject-dict
+^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/fortune\/question_spots\/panel\? - reject-dict
+^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/jujia\/flow\? - reject-dict
+^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/album\/hl_card\? - reject-dict
+^https:\/\/client-lz\.rili\.cn\/lizhi\/api\/fortune\/overview\? - reject-dict
+
+[Body Rewrite]
+http-response-jq ^https:\/\/v0-client-lz\.rili\.cn\/lizhi\/api\/zhwnl\/cal_module\/(datas|config)\? '.data |= map(select(.module_name as $name | ["实用工具","会员下icon","天气页面_右上角图标","天气页面_24小时","天气页面_15日","每日插屏","下拉屏保","星座Tab（黄历页）"] | index($name) != null))'
+http-response-jq ^http:\/\/pc\.suishenyun\.net\/peacock\/api\/adspool\? '.data |= map((.layout |= map(select(.key_name == "实用工具" or .key_name == "会员下icon" or .key_name == "天气页面_右上角图标" or .key_name == "天气页面_24小时" or .key_name == "天气页面_15日" or .key_name == "每日插屏" or .key_name == "下拉屏保" or .key_name == "星座Tab（黄历页）"))) | select(.layout | length > 0))'
+
+[MITM]
+hostname = %APPEND% v0-client-lz.rili.cn, client-lz.rili.cn
+

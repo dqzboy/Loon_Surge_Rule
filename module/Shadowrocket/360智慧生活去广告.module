@@ -1,0 +1,15 @@
+#!name=360智慧生活去广告
+#!desc=移除开屏广告、首页推广横幅、商城入口及我的页面推广。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SafetyHome.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Rule]
+DOMAIN,ad.iot.360.cn,REJECT
+
+[URL Rewrite]
+^https:\/\/app\.home\.360\.cn\/v1\/config\/custom_config - reject-dict
+
+[MITM]
+hostname = %APPEND% app.home.360.cn
+

@@ -1,0 +1,17 @@
+#!name=KOOK去广告
+#!desc=移除开屏广告、房间横幅推广、精简我的页面，移除底栏商城入口。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KOOK.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/www\.kookapp\.cn\/api\/v3\/ad\/config$ - reject-dict
+
+[Body Rewrite]
+http-response-jq ^https:\/\/(m|www)\.kookapp\.cn\/api\/v\d\/user\/settings$ 'delpaths([["ad_banner"]])'
+http-response-jq ^https:\/\/(m|www)\.kookapp\.cn\/api\/v\d\/user\/settings$ 'delpaths([["advertise_on_off"]])'
+http-response-jq ^https:\/\/(m|www)\.kookapp\.cn\/api\/v\d\/user\/settings$ 'if (getpath([]) | has("ios_mall_switch")) then (setpath(["ios_mall_switch"]; false)) else . end'
+
+[MITM]
+hostname = %APPEND% m.kookapp.cn, www.kookapp.cn
+
