@@ -10,8 +10,9 @@ DOMAIN,adashx.m.taobao.com,REJECT
 DOMAIN,ossgw.alicdn.com,REJECT
 DOMAIN,ems.youku.com,REJECT
 DOMAIN,hudong.alicdn.com,REJECT
-DOMAIN,h-adashx.ut.taobao.com,REJECT
 DOMAIN,ut.taobao.com,REJECT
+DOMAIN,heic.alicdn.com,REJECT
+DOMAIN-SUFFIX,h-adashx.ut.taobao.com,REJECT
 
 [URL Rewrite]
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) - reject-dict
