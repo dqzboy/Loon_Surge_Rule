@@ -6,16 +6,12 @@
 <img src="https://cdn.jsdelivr.net/gh/dqzboy/Images@main/picture/surge_02.png" width="300"></img>
 </p>
 
-## 介绍
-
-
 
 
 <div style="text-align: center">
   <p align="center">
-  <img src="https://github.com/user-attachments/assets/28e8134d-b908-4ee2-852e-20d79fb11158" width="230px" height="200px">
       <br>
-      <i>Loon、Surge自用**分流**、**去广告**规则，规则、插件、模块收集于网络并进行适用性调整。本人不作维护。只进行了整合并整理适合个人使用的Loon、Surge规则.</i>
+      <i>Loon、Surge自用分流、去广告规则，规则、插件、模块收集于网络并进行适用性调整。本人不作维护。只进行了整合并整理适合个人使用的Loon、Surge规则.</i>
   </p>
 </div>
 
@@ -26,7 +22,6 @@
 [![GitHub Issues](https://img.shields.io/github/issues/dqzboy/Loon_Surge_Rule.svg)](https://github.com/dqzboy/Loon_Surge_Rule/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/stars/dqzboy/Loon_Surge_Rule)](https://github.com/dqzboy/Loon_Surge_Rule)
 [![HitCount](https://views.whatilearened.today/views/github/dqzboy/Loon_Surge_Rule.svg)](https://github.com/dqzboy/Loon_Surge_Rule)
-[![GitHub license](https://img.shields.io/github/license/dqzboy/Loon_Surge_Rule)](https://github.com/dqzboy/Loon_Surge_Rule/blob/main/LICENSE)
 
 
 📢 <a href="https://t.me/RulesLab" style="font-size: 15px;">交流群</a> 
