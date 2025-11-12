@@ -253,7 +253,7 @@ quic://223.6.6.6:853
   </tbody>
 </table>
 
-##### *Telegram Bot: [点击联系](https://t.me/WiseAidBot)*
+##### *Telegram Bot: [点击联系](https://t.me/RelayHubBot)*
 **仅接受长期稳定运营，信誉良好的商家*
 
 ## 感谢
