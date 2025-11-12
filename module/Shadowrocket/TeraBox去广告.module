@@ -4,9 +4,14 @@
 #!homepage=https://github.com/dqzboy/Loon_Surge_Rule
 #!author=dqzboy
 
+[Rule]
+DOMAIN,ymg-api.terabox.com,REJECT
+
 [URL Rewrite]
 ^https:\/\/www\.terabox\.com\/adx\/ - reject-dict
 ^https:\/\/www\.terabox\.com\/api\/ad\/ - reject-dict
+^https:\/\/www\.terabox\.com\/api\/page\/tips\? - reject-dict
+^https:\/\/www\.terabox\.com\/rest\/1\.0\/task\/common\/inttips\? - reject-dict
 
 [MITM]
 hostname = %APPEND% www.terabox.com
