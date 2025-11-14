@@ -1,0 +1,14 @@
+#!name=掌上无畏契约去广告
+#!desc=移除开屏广告、弹窗推广、搜索热搜、搜索热榜。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ValorantBible.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/app\.mval\.qq\.com\/go\/recommend\/platflashbox\? - reject-dict
+^https:\/\/app\.mval\.qq\.com\/go\/mlol_news\/search\/varcache_hotV\d\? - reject-dict
+^https:\/\/app\.mval\.qq\.com\/go\/customize_search\/article_rank_tab\? - reject-dict
+
+[MITM]
+hostname = %APPEND% app.mval.qq.com
+
