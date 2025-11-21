@@ -1,11 +1,18 @@
 #!name=成分喵去广告
-#!desc=移除广告组件请求，移除被查商品购买连接。
+#!desc=移除首页推广活动、广告组件请求、移除被查商品购买链接、搜索发现。
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChengFenMiao.png
 #!homepage=https://github.com/dqzboy/Loon_Surge_Rule
 #!author=dqzboy
 
 [URL Rewrite]
+^https:\/\/app\.chengfenmiao\.com\/Listing\/LiveHots\? - reject-dict
+^https:\/\/app\.chengfenmiao\.com\/helper\/VersionCheck\? - reject-dict
 ^https:\/\/app\.chengfenmiao\.com\/item\/closet\? - reject-dict
+^https:\/\/app\.chengfenmiao\.com\/Helper\/HotWords\? - reject-dict
+
+[Body Rewrite]
+http-response-jq ^https:\/\/app\.chengfenmiao\.com\/helper\/setting\? 'delpaths([["detail_buy_sites"]])'
+http-response-jq ^https:\/\/app\.chengfenmiao\.com\/helper\/setting\? 'delpaths([["bottom_sites"]])'
 
 [MITM]
 hostname = %APPEND% app.chengfenmiao.com
