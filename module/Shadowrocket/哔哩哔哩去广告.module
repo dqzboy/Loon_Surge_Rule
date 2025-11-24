@@ -5,6 +5,7 @@
 #!author=dqzboy
 
 [Rule]
+DOMAIN,bsbsb.top,PROXY
 DOMAIN,api.biliapi.com,REJECT
 DOMAIN,app.biliapi.com,REJECT
 DOMAIN,api.biliapi.net,REJECT

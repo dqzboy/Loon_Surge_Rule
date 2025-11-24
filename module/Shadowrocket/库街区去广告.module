@@ -1,0 +1,15 @@
+#!name=库街区去广告
+#!desc=移除开屏广告、弹窗广告、搜索页面的热搜及话题热榜。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuroBBS.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/api\.kurobbs\.com\/config\/getOpenScreen$ - reject-dict
+^https:\/\/api\.kurobbs\.com\/config\/index\/windows$ - reject-dict
+^https:\/\/api\.kurobbs\.com\/config\/search\/getSearchConfig\? - reject-dict
+^https:\/\/api\.kurobbs\.com\/forum\/app\/topic\/hotlist\? - reject-dict
+
+[MITM]
+hostname = %APPEND% api.kurobbs.com
+

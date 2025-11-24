@@ -1,0 +1,22 @@
+#!name=YY语音去广告
+#!desc=移除开屏广告、应用内弹窗、任务推广、频道横幅推广，精简广场顶部标签。
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=Surge去广告
+#!date=2025-11-23 23:03:22
+
+[URL Rewrite]
+^https:\/\/web\.yy\.com\/yyvoice_task_sys\/bar\.html\? - reject
+
+[Body Rewrite]
+http-response-jq ^https:\/\/yuyin-api\.baizhanlive\.com\/postsquare\/college\/page\/tabsV3\? '.data.tabList |= map(select(.code == "post" or .code == "teamup" or .code == "college" or .code == "aiSecretRoom"))'
+
+[Map Local]
+^https:\/\/yuyin-api\.baizhanlive\.com\/homepage\/flashscreen\/get\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/yuyin-api\.baizhanlive\.com\/homepage\/homepage\/banner\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/yuyin-api\.baizhanlive\.com\/search\/search\/hotword\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% yuyin-api.baizhanlive.com, web.yy.com
+
