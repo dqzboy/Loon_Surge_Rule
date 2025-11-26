@@ -258,5 +258,3 @@ quic://223.6.6.6:853
 
 ## 感谢
 - 规则来自：[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon)
-
-- Surge模块转换自[可莉Loon插件](https://hub.kelee.one/)
