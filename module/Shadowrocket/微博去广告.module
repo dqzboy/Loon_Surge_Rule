@@ -22,7 +22,7 @@ DOMAIN-SUFFIX,biz.weibo.com,REJECT
 ^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\? - reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\? - reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? - reject-dict
-^https:\/\/api\.weibo\.cn\/!\/(?:sug\/list\/finderchange|was\/finder\/searchbarchange)\? - reject-dict
+^https:\/\/api\.weibo\.cn\/2\/!\/(?:search\/finder_nav_polling|sug\/list\/finderchange|was\/finder\/searchbarchange)\? - reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/video\/tiny_video_info_show\? - reject-dict
 ^https:\/\/bootrealtime\.uve\.weibo\.com\/v[23]\/ad\/realtime - reject-dict
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(?:get-lbs-cell-info\.php|sdkconfig\.php) - reject-dict

@@ -5,7 +5,6 @@
 #!author=dqzboy
 
 [Rule]
-AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"),(USER-AGENT,"AMapiPhone*")),REJECT
 DOMAIN,amap-aos-info-nogw.amap.com,REJECT
 DOMAIN,free-aos-cdn-image.amap.com,REJECT
 DOMAIN-SUFFIX,v.smtcdns.com,REJECT
@@ -21,9 +20,9 @@ DOMAIN-SUFFIX,v.smtcdns.com,REJECT
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? - reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? - reject-dict
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? - reject-dict
-^https:\/\/ai\.amap\.com\/v1\/ai_rec\/home_qs\? - reject-dict
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:order\/car\/(?:feedback\/get_card_questions|feedback\/viptips|king_toolbox_car_bubble|remark\/satisfactionConf|rights_information)|tips\/onscene_visual_optimization) - reject-dict
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:pay\/web\/paySuccess\/info\/request|transportation\/diversion\/resource\/driving) - reject-dict
+^https:\/\/ai\.amap\.com\/v1\/ai_rec\/home_qs\? - reject-dict
 
 [Body Rewrite]
 http-response-jq ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? 'delpaths([["data","commonMaterial"]])'
