@@ -1,0 +1,22 @@
+#!name=淘票票净化[墨鱼版]
+#!desc=淘票票净化[墨鱼版] (作者: @ddgksf2013)
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[Body Rewrite]
+http-response-jq https://acs.m.taobao.com/gw/mtop.film.mtopadvertiseapi.queryloadingbanner '.data.returnValue={}'
+http-response-jq https://acs.m.taobao.com/gw/mtop.film.independentadvertiseapi.querypreloadadvertise '.data.returnValue=[]'
+http-response-jq https://acs.m.taobao.com/gw/mtop.film.mtopsearchapi.getranklistbytypeforsearch '.data.returnValue={}'
+http-response-jq https://acs.m.taobao.com/gw/mtop.film.mtopintegrationapi.homeconfig 'del(.data.returnValue["floatingBanner","searchShadeList","secondFloorUrl"])'
+http-response-jq https://acs.m.taobao.com/gw/mtop.film.mtopindependentadvertiseapi.queryadvertise '.data.returnValue=[]'
+http-response-jq https://acs.m.taobao.com/gw/mtop.film.life.aristotle.get '.data.nodes[]?.nodes |= map(select(.data.componentId | IN("tpp_banner_loop", "tpp_guess_like") | not))'
+http-response-jq https://acs.m.taobao.com/gw/mtop.film.life.popup.get '.data={}'
+http-response-jq https://acs.m.taobao.com/gw/mtop.film.mtopitemadvertiseapi.queryadvertise 'del(.data.returnValue)'
+
+[Script]
+# > amdc处理@ddgksf2013
+amdc = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amdc.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% acs.m.taobao.com
+
