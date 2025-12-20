@@ -197,7 +197,6 @@ DOMAIN,logrcv.aiclk.com,REJECT
 DOMAIN,acjs.aliyun.com,REJECT
 DOMAIN,retcode.alicdn.com,REJECT
 DOMAIN,arms-retcode.aliyuncs.com,REJECT
-DOMAIN,at.alicdn.com,REJECT
 DOMAIN,huichuan.sm.cn,REJECT
 DOMAIN,huichuan-mc.sm.cn,REJECT
 DOMAIN,api.sm.cn,REJECT
