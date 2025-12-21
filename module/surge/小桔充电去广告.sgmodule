@@ -1,0 +1,21 @@
+#!name=小桔充电去广告
+#!desc=移除横幅广告、弹窗广告，精简我的页面。
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=Surge去广告
+#!date=2025-12-08 00:24:31
+
+[Body Rewrite]
+http-response-jq ^https:\/\/energy\.xiaojukeji\.com\/am\/marketing\/api\/member\/facade\/charge\/personal\/center\? 'delpaths([["data"]])'
+
+[Map Local]
+^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display($|\?) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/energy\.xiaojukeji\.com\/lego\/api\/orderSprint\/stair\/info($|\?) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/energy\.xiaojukeji\.com\/station-api\/search\/preWords$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/am\.didistatic\.com\/static\/am\/cf-terminal\/epower\/epower-thanos-app\/\d+\.\d+\.\d+\/pages\/people\/index\.js$ data-type=file data="https://kelee.one/Resource/JavaScript/XiaojukejiCharge/XiaojukejiCharge_remove_ads.js" status-code=200 header="Content-Type:text/plain"
+
+[MITM]
+hostname = %APPEND% energy.xiaojukeji.com, am.didistatic.com
+
