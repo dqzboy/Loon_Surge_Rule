@@ -1,0 +1,12 @@
+#!name=RQrun去广告
+#!desc=移除开屏广告
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/RQrun.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/api\.rq\.run\/Api\/Spreadimg\/spreadimg_type_list$ - reject-dict
+
+[MITM]
+hostname = %APPEND% api.rq.run
+
