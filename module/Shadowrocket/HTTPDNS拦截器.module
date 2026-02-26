@@ -5,8 +5,11 @@
 #!author=dqzboy
 
 [Rule]
+URL-REGEX,"^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/(\d+\/)?resolve(\?)?",REJECT
+URL-REGEX,"^http:\/\/\[((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))\]\/(\d+\/)?resolve(\?)?",REJECT
 DOMAIN,yyapp-httpdns.gslb.yy.com,REJECT
 DOMAIN,union-httpdns.gslb.yy.com,REJECT
+DOMAIN,yuyin-httpdns.gslb.yy.com,REJECT
 DOMAIN,httpdns-v6.gslb.yy.com,REJECT
 URL-REGEX,"^http:\/\/103\.44\.58\.64\/md\?",REJECT
 URL-REGEX,"^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns",REJECT
@@ -61,28 +64,14 @@ IP-CIDR6,2409:8702:4860:10::4d/128,REJECT,no-resolve
 DOMAIN,httpdns.kg.qq.com,REJECT
 URL-REGEX,"^http:\/\/182\.256\.116\.116\/d",REJECT
 DOMAIN,httpdns.bilivideo.com,REJECT
-URL-REGEX,"^http:\/\/47\.101\.175\.206\/resolve",REJECT
-URL-REGEX,"^http:\/\/47\.100\.123\.169\/resolve",REJECT
-URL-REGEX,"^http:\/\/120\.46\.169\.234\/resolve",REJECT
-URL-REGEX,"^http:\/\/121\.36\.72\.124\/resolve",REJECT
-URL-REGEX,"^http:\/\/116\.63\.10\.135\/resolve",REJECT
-URL-REGEX,"^http:\/\/117\.185\.228\.108\/resolve",REJECT
-URL-REGEX,"^http:\/\/117\.144\.238\.29\/resolve",REJECT
-URL-REGEX,"^http:\/\/122\.9\.7\.134\/resolve",REJECT
-URL-REGEX,"^http:\/\/101\.91\.140\.124\/resolve",REJECT
-URL-REGEX,"^http:\/\/101\.91\.140\.224\/resolve",REJECT
-URL-REGEX,"^http:\/\/122\.9\.13\.79\/resolve",REJECT
-URL-REGEX,"^http:\/\/122\.9\.15\.129\/resolve",REJECT
-URL-REGEX,"^http:\/\/112\.65\.200\.117\/resolve",REJECT
-URL-REGEX,"^http:\/\/112\.64\.218\.119\/resolve",REJECT
-URL-REGEX,"^http:\/\/114\.116\.215\.110\/resolve",REJECT
-URL-REGEX,"^http:\/\/116\.63\.10\.31\/resolve",REJECT
 DOMAIN,httpdns.browser.miui.com,REJECT
 DOMAIN,resolver.msg.xiaomi.net,REJECT
 DOMAIN,httpdns.alicdn.com,REJECT
 DOMAIN,httpdns-api.aliyuncs.com,REJECT
 DOMAIN,httpdns-sc.aliyuncs.com,REJECT
 IP-CIDR,203.107.1.0/24,REJECT,no-resolve
+DOMAIN,amdc.alipay.com,REJECT
+DOMAIN,ucdc.upaas.quark.cn,REJECT
 DOMAIN,httpdns.danuoyi.tbcache.com,REJECT
 DOMAIN,httpdns.cctv.com,REJECT
 DOMAIN,httpdns-browser.platform.dbankcloud.cn,REJECT
@@ -104,6 +93,7 @@ URL-REGEX,"^http:\/\/180\.76\.76\.112\/v\d\/",REJECT
 URL-REGEX,"^http:\/\/180\.76\.76\.112\/v\d\/resolve",REJECT
 URL-REGEX,"^http:\/\/180\.76\.76\.220\/v\d\/resolve",REJECT
 IP-CIDR,186.76.76.200/32,REJECT,no-resolve
+IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 DOMAIN,httpdns.ocloud.heytapmobi.com,REJECT
 DOMAIN,httpdns.push.heytapmobi.com,REJECT
 DOMAIN,dns.jd.com,REJECT
@@ -159,7 +149,6 @@ IP-CIDR,118.89.204.198/23,REJECT,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
 DOMAIN,hd.xiaojukeji.com,REJECT
 DOMAIN,httpdns.zybang.com,REJECT
-URL-REGEX,"^http:\/\/203\.107\.1\.33\/191607\/resolve\?",REJECT
 URL-REGEX,"^http:\/\/119\.29\.29\.29\/d",REJECT
 DOMAIN,serveraddr.service.kugou.com,REJECT
 DOMAIN,twns.p2ptun.qq.com,REJECT
@@ -169,21 +158,15 @@ URL-REGEX,"^http:\/\/54\.222\.159\.138:8053\/httpdns\/",REJECT
 URL-REGEX,"^http:\/\/101\.42\.130\.147:8053\/httpdns\/",REJECT
 URL-REGEX,"^http:\/\/106\.55\.220\.18:8053\/httpdns\/",REJECT
 URL-REGEX,"^http:\/\/139\.196\.12\.179:8053\/httpdns\/",REJECT
+USER-AGENT,"HttpdnsSDK*",REJECT
 
 [URL Rewrite]
-^https?:\/\/203\.107\.1\.1/\d+/ss - reject
-^https?:\/\/203\.107\.1\.33/\d+/ss - reject
-^https?:\/\/203\.107\.1\.66/\d+/ss - reject
-^https?:\/\/203\.107\.1\.67/\d+/ss - reject
-^https?:\/\/203\.107\.1\.97/\d+/ss - reject
-^https?:\/\/2401:b180:2000:30::1c\/\d+\/d - reject
-^https?:\/\/2401:b180:2000:20::10\/\d+\/d - reject
 ^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/http\/urlConfig\.do$ - reject-dict
-^https?:\/\/amdc\.alipay\.com\/query - reject-dict
 ^https?:\/\/cdn\.wup\.huya\.com\/monitor\/monitor\.jsp - reject
 ^https:\/\/msglb\.91160\.com\/msg\/outer\/broker\/get$ - reject-dict
 ^https:\/\/gslbali\.ximalaya\.com\/linkeye-cloud\/httpdns\/ - reject
+^https:\/\/ucdc\d?-upaas\.uc\.cn\/api\/v\d\/dns_query\? - reject-dict
 
 [MITM]
-hostname = %APPEND% 203.107.1.1, 203.107.1.33, 203.107.1.66, 203.107.1.67, 203.107.1.97, 2401:b180:2000:30::1c, 2401:b180:2000:20::10, amdc.alipay.com, appconf.mail.163.com, msglb.91160.com
+hostname = %APPEND% appconf.mail.163.com, msglb.91160.com, ucdc2-upaas.uc.cn
 
