@@ -2,12 +2,12 @@
 #!desc=自用去广告插件, 以下app请使用单独插件: 高德地图, 哔哩哔哩, 网易云音乐, 微博, YouTube, 知乎。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
 #!category=Surge去广告
-#!date=2026-01-26 17:30
+#!date=2026-03-06 21:15
 
 [Rule]
 # 12306
 DOMAIN,ad.12306.cn,DIRECT
-# 阿里巴巴
+AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"),(USER-AGENT,"Alibaba*")),REJECT
 DOMAIN-SUFFIX,ut.taobao.com,REJECT
 DOMAIN,dns.alidns.com,REJECT
 DOMAIN,ems.youku.com,REJECT
@@ -54,10 +54,12 @@ DOMAIN,adservice.sigmob.cn,REJECT
 # 工商银行
 DOMAIN-SUFFIX,mall.icbc.com.cn,REJECT
 DOMAIN,pageviewp.icbc.com.cn,REJECT
+AND,((DOMAIN-KEYWORD,mssdk),(DOMAIN-SUFFIX,zijieapi.com)),REJECT
 AND,((DOMAIN-KEYWORD,-misc-),(DOMAIN-SUFFIX,zijieapi.com)),REJECT
 DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
 DOMAIN-KEYWORD,ads.g.doubleclick,REJECT
 DOMAIN-KEYWORD,asiad.byteactivity,REJECT
+DOMAIN-KEYWORD,open.douyin.com,REJECT
 DOMAIN-KEYWORD,pangolin-dsp-toutiao,REJECT
 DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
 DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
@@ -90,6 +92,7 @@ DOMAIN,dm.toutiao.com,REJECT
 DOMAIN,dsp-x.jd.com,REJECT
 DOMAIN,et.tanx.com,REJECT
 DOMAIN,gdfp.gifshow.com,REJECT
+DOMAIN,images.pinduoduo.com,REJECT
 DOMAIN,init.supersonicads.com,REJECT
 DOMAIN,janapi.jd.com,REJECT
 DOMAIN,lf-ad-ies.bytecdn.cn,REJECT
@@ -99,6 +102,8 @@ DOMAIN,mon.toutiao.com,REJECT
 DOMAIN,mon.toutiaocloud.com,REJECT
 DOMAIN,mon.toutiaocloud.net,REJECT
 DOMAIN,mon.zijieapi.com,REJECT
+DOMAIN,mssdk.bytedance.com,REJECT
+DOMAIN,mssdk.volces.com,REJECT
 DOMAIN,open.e.kuaishou.com,REJECT
 DOMAIN,open.kuaishou.com,REJECT
 DOMAIN,pagead2.googlesyndication-cn.com,REJECT
@@ -107,6 +112,7 @@ DOMAIN,s3.pstatp.com,REJECT
 DOMAIN,s3a.pstatp.com,REJECT
 DOMAIN,sdk.e.qq.com,REJECT
 DOMAIN,tangram.e.qq.com,REJECT
+DOMAIN,tnc3-alisc1.zijieapi.com,REJECT
 DOMAIN,tosv.boe.byted.org,REJECT
 DOMAIN,tosv.byted.org,REJECT
 DOMAIN,ws.tapjoyads.com,REJECT
@@ -199,6 +205,10 @@ DOMAIN,tpns.qq.com,REJECT
 DOMAIN,wup.imtt.qq.com,REJECT
 IP-CIDR,47.110.187.87/32,REJECT,no-resolve
 AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"),(USER-AGENT,"TmallGenie*")),REJECT
+# 万能钥匙
+DOMAIN-SUFFIX,ads.umeng.com,REJECT
+DOMAIN-SUFFIX,aishuttler.com,REJECT
+DOMAIN-SUFFIX,wkanx.com,REJECT
 # 微信
 DOMAIN-SUFFIX,wxs.qq.com,REJECT
 DOMAIN,badjs.weixinbridge.com,REJECT
@@ -228,6 +238,7 @@ http-response-jq ^http:\/\/ad\.5tao5ai\.com\/common\/getReceipt\? 'delpaths([["p
 http-response-jq ^https:\/\/www\.washpayer\.com\/common\/getReceipt 'delpaths([["payload","adInfo"]])'
 http-response-jq ^https:\/\/mme\.api\.moji\.com\/json\/entrance\/list$ 'del(.entrance_region_res_list[] | select(.region_name == "皇冠区域" or .region_name == "banner区")) | .entrance_region_res_list[].entrance_res_list |= if . then map(select(.entrance_name | . != "墨迹钱包" and . != "墨圈")) else . end'
 http-response-jq ^https:\/\/gql(-fed)?\.reddit\.com '  walk(   if type == "object" then      (if .isNsfw == true then .isNsfw = false else . end)     | (if .isNsfwMediaBlocked == true then .isNsfwMediaBlocked = false else . end)     | (if .isNsfwContentShown == false then .isNsfwContentShown = true else . end)      | (if (.commentsPageAds | type == "array") then (.commentsPageAds = []) else . end)      | (if ( (.node | type == "object") and (.node.cells | type == "array") and (.node.cells | any(.__typename? == "AdMetadataCell" or .isAdPost? == true)) ) then empty else . end)     | (if (.node | type == "object") and (.node.adPayload | type == "object") then empty else . end)     | (if .__typename == "AdPost" then empty else . end)   else .  end) '
+http-response-jq ^https:\/\/api\.xiachufang\.com\/v2\/homepage\/paged_waterfall_recommendations\.json '.multiplex_cells |= map(select(.recommendation_cell.label != "广告"))'
 http-response-jq ^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView 'delpaths([["data","bottom","ad_info"]])'
 http-response-jq ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/act\/mishopSearch\/mainSearch 'delpaths([["data","recProductList"]])'
 http-response-jq ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/mf\/usercenter\/personalHome 'delpaths([["data","carouselAD"]])'
@@ -309,11 +320,19 @@ http-response-jq ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/mf\/usercenter\/per
 
 ^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(?:brandcpt-vedio|waimai-alita)\/\w+\.zip$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
+^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/nebulafile\/\w+ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 米家 //home.mi.com
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(?:banner|carousel\/banners|myTab|openingBanner) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
 # 太平洋寿险 //a.cpiccdn.com
 ^https:\/\/a\.cpiccdn\.com\/config-center\/api\/configfile\/images\/\d{8}\/\d{13}_(?:(?:630|945|1035)_\d{2,4}|123_48|136_136|207_210|408_408|750_750|1125_\d{4})\.(gif|jpg|png)$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 网上国网 //osg-service.sgcc.com.cn
 ^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 下厨房 //api.xiachufang.com
+^https:\/\/api\.xiachufang\.com\/v2\/ad\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 微信 //mp.weixin.qq.com
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(?:cps_product_info|getappmsgad|getbizbanner|jsmonitor|masonryfeed|relatedarticle|relatedsearchword) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -327,8 +346,8 @@ http-response-jq ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/mf\/usercenter\/per
 
 ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/(?:rec\/merge\/|skywheel\/(?:homePage\/bottomFloatLayer|mishop\/splash|shop\/resourceAms|ucenter\/pendant)) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 米家 //home.mi.com
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(?:banner|carousel\/banners|myTab|openingBanner) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# 星星充电
+^https:\/\/gateway\.starcharge\.com\/app\/(?:api\/advertisement|v2\/apiV2\/advertisement\/marke)\/list data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
 # 12306 //ad.12306.cn, mobile.12306.cn
@@ -375,5 +394,5 @@ cloud139_1 = type=http-response, pattern=^https:\/\/ad\.mcloud\.139\.com\/advert
 cloud139_2 = type=http-response, pattern=^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent, script-path=https://rucu6.pages.dev/Scripts/cloud139.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, 2023.redircdn.com, www.washpayer.com, oneapph5.dongfeng-nissan.com.cn, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, mme.api.moji.com, sns.api.moji.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, gql.reddit.com, gql-fed.reddit.com, a.cpiccdn.com, osg-service.sgcc.com.cn, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, marketing-aibox.v.mitvos.com, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com
+hostname = %APPEND% ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, 2023.redircdn.com, www.washpayer.com, oneapph5.dongfeng-nissan.com.cn, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, mme.api.moji.com, sns.api.moji.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, home.mi.com, gql.reddit.com, gql-fed.reddit.com, a.cpiccdn.com, osg-service.sgcc.com.cn, api.xiachufang.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, marketing-aibox.v.mitvos.com, api.m.mi.com, shop-api.retail.mi.com, gateway.starcharge.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com
 
