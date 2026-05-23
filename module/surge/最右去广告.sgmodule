@@ -2,7 +2,7 @@
 #!desc=移除开屏广告、信息流广告和广告轮播图。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
 #!category=Surge去广告
-#!date=2025-05-14 01:51:31
+#!date=2026-02-22 01:28:27
 
 [Rule]
 DOMAIN,adapi.izuiyou.com,REJECT
@@ -11,13 +11,6 @@ URL-REGEX,"^http:\/\/file-share\.izuiyou\.com\/octopus\/media\/templates\/search
 
 [URL Rewrite]
 ^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
-^https?:\/\/203\.107\.1\.1/\d+/ss - reject
-^https?:\/\/203\.107\.1\.33/\d+/ss - reject
-^https?:\/\/203\.107\.1\.66/\d+/ss - reject
-^https?:\/\/203\.107\.1\.67/\d+/ss - reject
-^https?:\/\/203\.107\.1\.97/\d+/ss - reject
-^https?:\/\/2401:b180:2000:30::1c\/\d+\/d - reject
-^https?:\/\/2401:b180:2000:20::10\/\d+\/d - reject
 
 [Map Local]
 ^https?:\/\/api\.izuiyou\.com\/config\/get_banner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -25,5 +18,5 @@ URL-REGEX,"^http:\/\/file-share\.izuiyou\.com\/octopus\/media\/templates\/search
 ^https:\/\/zyfile\.izuiyou\.com\/zyfile\/c2\/a0\/[a-z0-9-]+\.json data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [MITM]
-hostname = %APPEND% api.izuiyou.com, zyfile.izuiyou.com, 203.107.1.1, 203.107.1.33, 203.107.1.66, 203.107.1.67, 203.107.1.97
+hostname = %APPEND% api.izuiyou.com, zyfile.izuiyou.com
 

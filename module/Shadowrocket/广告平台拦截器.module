@@ -1,10 +1,11 @@
 #!name=广告平台拦截器
-#!desc=此插件是所有去广告插件的基础，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\n\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里巴巴、阿里妈妈、阿里百川、超级汇川、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、维快网络、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、推啊、旺脉、新度博望、新多广告、快易科技、封狐信息、互裕科技、旺脉信息、佳量动力、享点科技、游昆信息、小川科技、旺脉科技、萃弈、泛为、米漫、易量跃动、秒针、贵士移动、星讯、倍业科技、创聚科技、硬核聚视、数因科技、Google、SupersonicAds、APPSAD、Adjust、Sigmob、TradPlus、Fancy、MedPro、AppLovin、Unity3D、Tapjoy、Liftoff、Vungle、Moloco、Smadex、Tapad、Appier、InMobi、AppsFlyer、AppLovin、Moloco、RayJump、RixEngine等广告平台的广告请求，更适合iOS平台的应用。
+#!desc=此插件是所有去广告插件的基础，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\n\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里巴巴、阿里妈妈、阿里百川、超级汇川、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、维快网络、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、推啊、旺脉、新度博望、新多广告、快易科技、封狐信息、互裕科技、旺脉信息、佳量动力、享点科技、游昆信息、小川科技、旺脉科技、萃弈、泛为、米漫、易量跃动、秒针、贵士移动、星讯、倍业科技、创聚科技、硬核聚视、数因科技、芒拓网络、上海领页、神蓍科技、酷盈、Google、SupersonicAds、APPSAD、Adjust、Sigmob、TradPlus、Fancy、MedPro、AppLovin、Unity3D、Tapjoy、Liftoff、Vungle、Moloco、Smadex、Tapad、Appier、InMobi、AppsFlyer、AppLovin、Moloco、RayJump、RixEngine、Amazon、Skarb、Amplitude等广告平台的广告请求，更适合iOS平台的应用。
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
 #!homepage=https://github.com/dqzboy/Loon_Surge_Rule
 #!author=dqzboy
 
 [Rule]
+DOMAIN-KEYWORD,adstrategy,REJECT
 AND,((DOMAIN-KEYWORD,tnc),(OR,((DOMAIN-SUFFIX,capcutapi.com),(DOMAIN-SUFFIX,zijieapi.com),(DOMAIN-SUFFIX,isnssdk.com),(DOMAIN-SUFFIX,toutiaoapi.com),(DOMAIN-SUFFIX,bytedance.com),(DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,sgsnssdk.com)))),DIRECT
 AND,((DOMAIN-KEYWORD,-ad-),(DOMAIN-SUFFIX,byteimg.com)),REJECT
 AND,((DOMAIN-KEYWORD,ads),(DOMAIN-KEYWORD,-normal.zijieapi.com)),REJECT
@@ -214,6 +215,7 @@ DOMAIN,im-x.jd.com,REJECT
 DOMAIN,xlog.jd.com,REJECT
 DOMAIN,janapi.jd.com,REJECT
 DOMAIN-SUFFIX,toponadss.com,REJECT
+DOMAIN-SUFFIX,toponad.com,REJECT
 DOMAIN-SUFFIX,motowoo.com,REJECT
 DOMAIN,guide2.bianxianmao.com,REJECT
 DOMAIN,sdk.zhangyuyidong.cn,REJECT
@@ -250,14 +252,15 @@ DOMAIN,ad-evods.tianya.tv,REJECT
 DOMAIN-SUFFIX,tuia.cn,REJECT
 DOMAIN-SUFFIX,66mobi.com,REJECT
 DOMAIN-SUFFIX,xdplt.com,REJECT
+DOMAIN,ads.cup.com.cn,REJECT
 DOMAIN-SUFFIX,adjust.com,REJECT
 DOMAIN-SUFFIX,adjust.net.in,REJECT
 DOMAIN,app-analytics-services.com,REJECT
 DOMAIN,odm.app-ads-services.com,REJECT
 DOMAIN,firebaselogging-pa.googleapis.com,REJECT
 DOMAIN,firebaseinappmessaging.googleapis.com,REJECT
-DOMAIN,firebaseremoteconfig.googleapis.com,REJECT
 DOMAIN,fundingchoicesmessages.google.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
 DOMAIN-SUFFIX,doubleclick-cn.net,REJECT
 DOMAIN-SUFFIX,googlesyndication-cn.com,REJECT
 DOMAIN-SUFFIX,xinduoad.com,REJECT
@@ -285,6 +288,15 @@ DOMAIN-SUFFIX,fancydsp.com,REJECT
 DOMAIN-SUFFIX,xcultur.com,REJECT
 DOMAIN-SUFFIX,bayescom.com,REJECT
 DOMAIN-SUFFIX,etoolads.cn,REJECT
+DOMAIN,ad.aggrxinc.com,REJECT
+DOMAIN-SUFFIX,mentamob.com,REJECT
+DOMAIN-SUFFIX,advlion.com,REJECT
+DOMAIN-SUFFIX,shanghailingye.cn,REJECT
+DOMAIN-SUFFIX,shenshiads.com,REJECT
+DOMAIN-SUFFIX,adshenshi.com,REJECT
+DOMAIN-SUFFIX,qidianad.com,REJECT
+DOMAIN-SUFFIX,kuaichuanad.com,REJECT
+DOMAIN-SUFFIX,statisticslinks.com,REJECT
 DOMAIN-SUFFIX,tradplusad.com,REJECT
 DOMAIN-SUFFIX,fancyapi.com,REJECT
 DOMAIN-SUFFIX,medproad.com,REJECT
@@ -304,9 +316,12 @@ DOMAIN-SUFFIX,applvn.com,REJECT
 DOMAIN-SUFFIX,moloco.com,REJECT
 DOMAIN-SUFFIX,rayjump.com,REJECT
 DOMAIN-SUFFIX,rixengine.com,REJECT
+DOMAIN-SUFFIX,amazon-adsystem.com,REJECT
+DOMAIN-SUFFIX,skarb.club,REJECT
+DOMAIN-SUFFIX,skarb.work,REJECT
+DOMAIN-SUFFIX,amplitude.com,REJECT
 
 [URL Rewrite]
-ad.aggrxinc.com, - reject
 ^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ - reject
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_ - reject
 ^https:\/\/images\.pinduoduo\.com\/mrk\/ - reject
