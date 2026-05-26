@@ -1,0 +1,17 @@
+#!name=Roborock去广告
+#!desc=移除横幅、活动推广、机器人图标，精简服务中心。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Roborock.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/cniot\.roborock\.com\/api\/v1\/activity\/banner\/list$ - reject-dict
+^https:\/\/cniot\.roborock\.com\/api\/v1\/activity\/latest$ - reject-dict
+^https:\/\/cniot\.roborock\.com\/api\/v1\/app\/theme\/device\/icon\? - reject
+
+[Body Rewrite]
+http-response-jq ^https:\/\/api\.roborock\.com\/v2\/h5\.page\.item\.info\?id=4115$ '.data |= map(select(.title == "常用功能"))'
+
+[MITM]
+hostname = %APPEND% cniot.roborock.com, api.roborock.com
+

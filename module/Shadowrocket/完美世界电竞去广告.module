@@ -1,0 +1,15 @@
+#!name=完美世界电竞去广告
+#!desc=移除开屏广告，精简搜索页。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PerfectWorldEsport.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/appactivity\.wmpvp\.com\/hotsearch\/all\? - reject-dict
+
+[Body Rewrite]
+http-response-jq ^https:\/\/api\.wmpvp\.com\/api\/v1\/config\/promote$ 'delpaths([["data","ad"]])'
+
+[MITM]
+hostname = %APPEND% api.wmpvp.com, appactivity.wmpvp.com
+

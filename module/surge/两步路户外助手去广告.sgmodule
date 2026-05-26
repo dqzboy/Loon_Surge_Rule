@@ -1,0 +1,19 @@
+#!name=两步路户外助手去广告
+#!desc=移除开屏广告、弹窗广告，精简我的页面。
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=Surge去广告
+#!date=2026-05-16 14:43:15
+
+[Body Rewrite]
+http-response-jq ^https:\/\/helper\.2bulu\.com\/getAppEntranceConfig\? '.configData=(.configData|fromjson|del(.adPlatform,.adIntertitialShowType,.adsConfig,.adIntertitialDisplayedLimit,.adSplashShowTypeWhenHotStart,.adIntertitialDayDisplayedMaxCount,.od_adsType,.showMeBaiHeAdView)|tojson)'
+
+[Map Local]
+^https:\/\/helper\.2bulu\.com\/search\/searchHotKeyList\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/helper\.2bulu\.com\/promote\/getAppUserModule\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/helper\.2bulu\.com\/proSpecial\/allData\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% helper.2bulu.com
+

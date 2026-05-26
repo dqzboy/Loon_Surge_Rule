@@ -1,0 +1,16 @@
+#!name=豆瓣阅读去广告
+#!desc=移除开屏广告、弹窗广告、热门搜索、热搜榜。
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DoubanRead.png
+#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
+#!author=dqzboy
+
+[URL Rewrite]
+^https:\/\/read\.douban\.com\/api\/v2\/ads\/ - reject-dict
+^https:\/\/read\.douban\.com\/api\/v2\/popup$ - reject-dict
+^https:\/\/read\.douban\.com\/api\/v2\/search\/hot_words$ - reject-dict
+^https:\/\/read\.douban\.com\/api\/v2\/search\/hot_charts$ - reject-dict
+^https:\/\/read\.douban\.com\/api\/v2\/search\/rec_urls$ - reject-dict
+
+[MITM]
+hostname = %APPEND% read.douban.com
+

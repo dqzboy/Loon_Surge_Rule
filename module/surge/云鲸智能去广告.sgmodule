@@ -1,0 +1,16 @@
+#!name=云鲸智能去广告
+#!desc=移除开屏广告、横幅推广，禁用商城。
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=Surge去广告
+#!date=2026-02-27 22:23:04
+
+[Map Local]
+^https:\/\/cn-app\.narwaltech\.com\/operate\/appPosition\/listSplash\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/cn-app\.narwaltech\.com\/operate\/cactivity\/listByResourceIds\?resourceIds=(user_center_banner|index_banner) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/store\.narwal\.com\/mall\/customPage\/getByPageKeyword\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% cn-app.narwaltech.com, store.narwal.com
+

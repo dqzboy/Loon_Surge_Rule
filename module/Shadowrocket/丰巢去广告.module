@@ -18,6 +18,7 @@
 [Body Rewrite]
 http-response-jq ^https:\/\/consumer\.fcbox\.com\/v1\/dynamicConfig\/findTabbarConfig\/mainPage$ 'delpaths([["data","lifeService"]])'
 http-response-jq ^https:\/\/consumer\.fcbox\.com\/v1\/dynamicConfig\/findTabbarConfig\/mainPage$ 'delpaths([["data","mall"]])'
+http-response-jq ^https:\/\/consumer\.fcbox\.com\/v1\/dynamicConfig\/findTabbarConfig\/mainPage$ 'delpaths([["data","wash"]])'
 
 [MITM]
 hostname = %APPEND% consumer.fcbox.com, dsp.fcbox.com

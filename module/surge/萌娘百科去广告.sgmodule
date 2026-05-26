@@ -1,0 +1,14 @@
+#!name=萌娘百科去广告
+#!desc=移除开屏广告、弹窗、首页横幅。
+#!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
+#!category=Surge去广告
+#!date=2026-01-30 00:26:51
+
+[URL Rewrite]
+^https:\/\/grpc\.moegirl\.org\.cn\/moegirl\.moepad\.MoepadAppMetaService\/GetAppInitialInfo$ - reject
+^https:\/\/grpc\.moegirl\.org\.cn\/moegirl\.moepad\.MoepadService\/GetLaunchAdPage$ - reject
+^https:\/\/grpc\.moegirl\.org\.cn\/moegirl\.moepad\.MoepadService\/GetFeedAdProbability$ - reject
+
+[MITM]
+hostname = %APPEND% grpc.moegirl.org.cn
+
