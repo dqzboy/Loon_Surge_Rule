@@ -2,7 +2,7 @@
 #!desc=移除开屏广告、信息流广告和帖内广告，精简侧拉抽屉及我的页面。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
 #!category=Surge去广告
-#!date=2026-01-01 15:45:01
+#!date=2026-06-01 17:11:35
 
 [Rule]
 DOMAIN,180.76.76.200,REJECT

@@ -2,7 +2,7 @@
 #!desc=移除开屏广告、弹窗广告、播放器推广、歌曲详情界面视频推广、播放页面的歌曲视频，精简首页和我的页面。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
 #!category=Surge去广告
-#!date=2025-08-31 05:46:14
+#!date=2026-06-01 17:11:35
 
 [Body Rewrite]
 http-response-jq ^https:\/\/tnc\d-(bjlgy|ali[a-z]{2})\d?\.zijieapi\.com\/get_domains\/v\d\/\? 'if (getpath(["data"]) | has("opaque_data_enabled")) then (setpath(["data","opaque_data_enabled"]; 0)) else . end'

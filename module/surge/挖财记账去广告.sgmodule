@@ -2,7 +2,7 @@
 #!desc=移除弹窗广告、推广语横幅和右下角悬浮广告。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
 #!category=Surge去广告
-#!date=2025-06-30 21:53:43
+#!date=2026-06-01 17:11:35
 
 [Map Local]
 ^https:\/\/jz\.wacaijizhang\.com\/api\/banners\/ribbon\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"

@@ -2,7 +2,7 @@
 #!desc=移除开屏广告、弹窗广告、各页面横幅推广，移除首页悬浮挂件。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
 #!category=Surge去广告
-#!date=2026-01-31 01:14:42
+#!date=2026-06-01 17:11:35
 
 [Body Rewrite]
 http-response-jq ^https:\/\/app\.huashi6\.com\/app\/common\/config$ 'if (getpath(["data"]) | has("disableAd")) then (setpath(["data","disableAd"]; true)) else . end'

@@ -2,7 +2,7 @@
 #!desc=移除开屏广告、信息流广告、弹窗广告、轮播图广告、侧边栏横幅广告，精简搜索页面。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
 #!category=Surge去广告
-#!date=2026-05-11 03:08:03
+#!date=2026-06-01 17:11:35
 
 [Map Local]
 ^https:\/\/api\.psy-1\.com\/cosleep\/startup\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"

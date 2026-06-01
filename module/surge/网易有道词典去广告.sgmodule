@@ -2,7 +2,7 @@
 #!desc=移除开屏广告、弹窗广告、右上角推广。
 #!author=dqzboy[https://github.com/dqzboy/Loon_Surge_Rule]
 #!category=Surge去广告
-#!date=2026-05-15 21:46:51
+#!date=2026-06-01 17:11:35
 
 [Body Rewrite]
 http-response-jq ^https:\/\/dict\.youdao\.com\/homepage\/toolbar\/get\/ 'delpaths([["data","vipTag"]])'
