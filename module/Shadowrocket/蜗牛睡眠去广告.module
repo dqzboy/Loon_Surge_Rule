@@ -1,9 +1,0 @@
-#!name=蜗牛睡眠去广告
-#!desc=移除音乐页面横幅、日报告解决方案商品推广，移除我的页面服务推广。
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SnailSleep.png
-#!homepage=https://github.com/dqzboy/Loon_Surge_Rule
-#!author=dqzboy
-
-[Rule]
-DOMAIN,ad.snailsleep.net,REJECT
-
