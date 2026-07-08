@@ -64,8 +64,9 @@
 </table>
 </details>
 
-### Surge 模块
-- [奶思-Surge广告拦截&净化合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module)
+### Surge \ shadowrocket模块
+- [奶思-Surge广告拦截](https://raw.githubusercontent.com/dqzboy/Loon_Surge_Rule/refs/heads/main/module/surge_modules/%E5%A5%B6%E6%80%9D%E5%8E%BB%E5%B9%BF%E5%91%8A%E5%90%88%E9%9B%86.sgmodule)
+- [奶思-shadowrocket广告拦截](https://raw.githubusercontent.com/dqzboy/Loon_Surge_Rule/refs/heads/main/module/shadowrocket_modules/%E5%A5%B6%E6%80%9D%E5%8E%BB%E5%B9%BF%E5%91%8A%E5%90%88%E9%9B%86.module)
 
 ## Loon 导入规则
 ### Loon 分流规则
