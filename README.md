@@ -65,7 +65,6 @@
 </details>
 
 ### Surge 模块
-- [推荐 本仓库整理的模块 >>> 点击打开](https://surge-hub.vercel.app/)
 - [奶思-Surge广告拦截&净化合集](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module)
 
 ## Loon 导入规则
