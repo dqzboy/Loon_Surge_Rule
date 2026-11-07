@@ -1,9 +1,11 @@
-# AI 服务分流规则
+# AI 服务分流规则（Surge RULE-SET）
 # 原则：优先使用服务专属域名，避免加入通用统计、支付和共享 CDN 域名。
+# 策略由主配置指定；需要接管 Siri 时，本规则集应放在 SYSTEM 直连规则之前。
 
 # OpenAI / ChatGPT / Sora
 AND,((DOMAIN-KEYWORD,chatgpt-async-webps-prod-),(DOMAIN-SUFFIX,webpubsub.azure.com))
 AND,((DOMAIN-KEYWORD,openaicom-api-),(DOMAIN-SUFFIX,azurefd.net))
+DOMAIN,cdn.openaimerge.com
 DOMAIN,chatgpt.livekit.cloud
 DOMAIN,host.livekit.cloud
 DOMAIN-SUFFIX,turn.livekit.cloud
@@ -38,6 +40,7 @@ DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
 DOMAIN,copilot-proxy.githubusercontent.com
 DOMAIN,copilot-workspace.githubnext.com
 DOMAIN,copilotprodattachments.blob.core.windows.net
+DOMAIN,origin-tracker.githubusercontent.com
 DOMAIN,sydney.bing.com
 DOMAIN-SUFFIX,copilot.cloud.microsoft
 DOMAIN-SUFFIX,copilot.com
@@ -122,10 +125,18 @@ DOMAIN,trae-api-sg.mchost.guru
 DOMAIN-SUFFIX,trae.ai
 
 # Cursor
+DOMAIN,accounts.spacex.ai
+DOMAIN,anysphere-binaries.s3.us-east-1.amazonaws.com
 DOMAIN-SUFFIX,cursor-cdn.com
 DOMAIN-SUFFIX,cursor.com
 DOMAIN-SUFFIX,cursor.sh
 DOMAIN-SUFFIX,cursorapi.com
+DOMAIN-SUFFIX,cursorvm.com
+
+# Cursor 自托管 Cloud Agent：产物上传与工作区下载，仅匹配官方列出的存储主机
+DOMAIN,agent-stores.s3.us-east-1.amazonaws.com
+DOMAIN,cloud-agent-artifacts.s3.us-east-1.amazonaws.com
+DOMAIN,cursor.blob.core.windows.net
 
 # Windsurf / Codeium
 DOMAIN-SUFFIX,codeium.com
